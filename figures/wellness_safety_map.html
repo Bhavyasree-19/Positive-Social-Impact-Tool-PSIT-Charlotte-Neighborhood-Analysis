@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5e24d501d62335966dc499948f3d028b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5e24d501d62335966dc499948f3d028b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5e24d501d62335966dc499948f3d028b = L.map(
+                "map_5e24d501d62335966dc499948f3d028b",
+                {
+                    center: [35.2271, -80.8431],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dc47dcf00d0a9f48304b8bd7951e9eb9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dc47dcf00d0a9f48304b8bd7951e9eb9.addTo(map_5e24d501d62335966dc499948f3d028b);
+        
+    
+            var marker_cluster_f0eee846c97b913aea67dd6826f21958 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_ba7d20a2481a706948975e23971ff3e3 = L.marker(
+                [35.2271, -80.8431],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_b77f164c6efd5eeb43ae457ebee0866a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c68d82a986bd9fc96ea3c487a08277d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_efe4b5e5b2450ff656b9656133031ca0 = $(`<div id="html_efe4b5e5b2450ff656b9656133031ca0" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28202<br>     Area: Uptown Charlotte<br>     Ozone: 34<br>     PM10: 18<br>     Pollution: High<br>     PIST Score: 1<br>     Comment: High air pollution     </div>`)[0];
+                popup_c68d82a986bd9fc96ea3c487a08277d4.setContent(html_efe4b5e5b2450ff656b9656133031ca0);
+            
+        
+
+        marker_ba7d20a2481a706948975e23971ff3e3.bindPopup(popup_c68d82a986bd9fc96ea3c487a08277d4)
+        ;
+
+        
+    
+    
+                marker_ba7d20a2481a706948975e23971ff3e3.setIcon(icon_b77f164c6efd5eeb43ae457ebee0866a);
+            
+    
+            var marker_a778cd9eef1a7adbb6a730537cfb77f7 = L.marker(
+                [35.2154, -80.8601],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_ff8cf6f5b94909d01063c38e0b5040cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6dd8ac192b5fdcc6b528fbc92145650c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6e7b3d8b3cbbc1891abd3740768fe3a1 = $(`<div id="html_6e7b3d8b3cbbc1891abd3740768fe3a1" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28203<br>     Area: South End<br>     Ozone: 33<br>     PM10: 18<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Moderate air pollution     </div>`)[0];
+                popup_6dd8ac192b5fdcc6b528fbc92145650c.setContent(html_6e7b3d8b3cbbc1891abd3740768fe3a1);
+            
+        
+
+        marker_a778cd9eef1a7adbb6a730537cfb77f7.bindPopup(popup_6dd8ac192b5fdcc6b528fbc92145650c)
+        ;
+
+        
+    
+    
+                marker_a778cd9eef1a7adbb6a730537cfb77f7.setIcon(icon_ff8cf6f5b94909d01063c38e0b5040cb);
+            
+    
+            var marker_5e6b0572e27515a68d2028885c8b6b89 = L.marker(
+                [35.1385, -80.856],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_726b90156849838d66f72048670d9899 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f71fbc55c467415c5dcd2affc9b7a95 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a8e73398af2609f1f1874a55d60473c = $(`<div id="html_3a8e73398af2609f1f1874a55d60473c" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28210<br>     Area: SouthPark<br>     Ozone: 34<br>     PM10: 15<br>     Pollution: Low<br>     PIST Score: 3<br>     Comment: Low pollution area     </div>`)[0];
+                popup_7f71fbc55c467415c5dcd2affc9b7a95.setContent(html_3a8e73398af2609f1f1874a55d60473c);
+            
+        
+
+        marker_5e6b0572e27515a68d2028885c8b6b89.bindPopup(popup_7f71fbc55c467415c5dcd2affc9b7a95)
+        ;
+
+        
+    
+    
+                marker_5e6b0572e27515a68d2028885c8b6b89.setIcon(icon_726b90156849838d66f72048670d9899);
+            
+    
+            var marker_02602630bffad083acc407e78faada6f = L.marker(
+                [35.2571, -80.819],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_88d72bddc96298827e4e231dbc8dc317 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7400feed847dea44fd2f59420266274e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99c293cc44bd3f6244ed7075ac8242d2 = $(`<div id="html_99c293cc44bd3f6244ed7075ac8242d2" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28206<br>     Area: North Charlotte<br>     Ozone: 33<br>     PM10: 19<br>     Pollution: High<br>     PIST Score: 1<br>     Comment: Industrial emissions     </div>`)[0];
+                popup_7400feed847dea44fd2f59420266274e.setContent(html_99c293cc44bd3f6244ed7075ac8242d2);
+            
+        
+
+        marker_02602630bffad083acc407e78faada6f.bindPopup(popup_7400feed847dea44fd2f59420266274e)
+        ;
+
+        
+    
+    
+                marker_02602630bffad083acc407e78faada6f.setIcon(icon_88d72bddc96298827e4e231dbc8dc317);
+            
+    
+            var marker_4d391682bd12233601641160824257e4 = L.marker(
+                [35.2204, -80.7736],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_f44d3d838e9487a88b105358854610f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee6ed1def7e871c8053e67f6a57337fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb355f9caf44fa599d4adc1c718d3a1f = $(`<div id="html_eb355f9caf44fa599d4adc1c718d3a1f" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28205<br>     Area: NoDa<br>     Ozone: 32<br>     PM10: 16<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Traffic and local activity     </div>`)[0];
+                popup_ee6ed1def7e871c8053e67f6a57337fe.setContent(html_eb355f9caf44fa599d4adc1c718d3a1f);
+            
+        
+
+        marker_4d391682bd12233601641160824257e4.bindPopup(popup_ee6ed1def7e871c8053e67f6a57337fe)
+        ;
+
+        
+    
+    
+                marker_4d391682bd12233601641160824257e4.setIcon(icon_f44d3d838e9487a88b105358854610f0);
+            
+    
+            var marker_0199afa19ef22c7f733a08b0ce69d4a5 = L.marker(
+                [35.1659, -80.798],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_374c80c50ba5246b442c30aec7f2d9a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c47413faf6c0e1f34afa61715861736 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c198180e682c491097f2d9bdd3bf6f3d = $(`<div id="html_c198180e682c491097f2d9bdd3bf6f3d" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28211<br>     Area: Cotswold<br>     Ozone: 34<br>     PM10: 15<br>     Pollution: Low<br>     PIST Score: 3<br>     Comment: Low residential pollution     </div>`)[0];
+                popup_6c47413faf6c0e1f34afa61715861736.setContent(html_c198180e682c491097f2d9bdd3bf6f3d);
+            
+        
+
+        marker_0199afa19ef22c7f733a08b0ce69d4a5.bindPopup(popup_6c47413faf6c0e1f34afa61715861736)
+        ;
+
+        
+    
+    
+                marker_0199afa19ef22c7f733a08b0ce69d4a5.setIcon(icon_374c80c50ba5246b442c30aec7f2d9a0);
+            
+    
+            var marker_3f641a5d78c0c248186be589e0c3397b = L.marker(
+                [35.1891, -80.7434],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_f006b781db341a40c45280d185f41862 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f72bab0131984f3763c179665d8de5b0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb9d5b21c8f66b35e71f6b051bdedda9 = $(`<div id="html_bb9d5b21c8f66b35e71f6b051bdedda9" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28212<br>     Area: East Charlotte<br>     Ozone: 31<br>     PM10: 17<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Moderate smog     </div>`)[0];
+                popup_f72bab0131984f3763c179665d8de5b0.setContent(html_bb9d5b21c8f66b35e71f6b051bdedda9);
+            
+        
+
+        marker_3f641a5d78c0c248186be589e0c3397b.bindPopup(popup_f72bab0131984f3763c179665d8de5b0)
+        ;
+
+        
+    
+    
+                marker_3f641a5d78c0c248186be589e0c3397b.setIcon(icon_f006b781db341a40c45280d185f41862);
+            
+    
+            var marker_c6787786f6a1edea2231e035a9c0f2c7 = L.marker(
+                [35.2407, -80.8896],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_e0579c4ef1fee6cb56213d91c350d06f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2eece6e64deab85fe5779055d38ab99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03416cebe3b5a9d06ce7541fef68645a = $(`<div id="html_03416cebe3b5a9d06ce7541fef68645a" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28208<br>     Area: Airport Area<br>     Ozone: 32<br>     PM10: 21<br>     Pollution: High<br>     PIST Score: 1<br>     Comment: Flight path zone     </div>`)[0];
+                popup_f2eece6e64deab85fe5779055d38ab99.setContent(html_03416cebe3b5a9d06ce7541fef68645a);
+            
+        
+
+        marker_c6787786f6a1edea2231e035a9c0f2c7.bindPopup(popup_f2eece6e64deab85fe5779055d38ab99)
+        ;
+
+        
+    
+    
+                marker_c6787786f6a1edea2231e035a9c0f2c7.setIcon(icon_e0579c4ef1fee6cb56213d91c350d06f);
+            
+    
+            var marker_f08a394588ad36b3c11c4de2cea4a64e = L.marker(
+                [35.2943, -80.8881],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_b46f5b9ea67bfb22e11efd5546f4d1db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d667f2059a8982611af2576c9015f97d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_51b8e3f3444fdcc3d035e0e19975d9cc = $(`<div id="html_51b8e3f3444fdcc3d035e0e19975d9cc" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28216<br>     Area: Beatties Ford<br>     Ozone: 31<br>     PM10: 19<br>     Pollution: High<br>     PIST Score: 1<br>     Comment: Transit exposure     </div>`)[0];
+                popup_d667f2059a8982611af2576c9015f97d.setContent(html_51b8e3f3444fdcc3d035e0e19975d9cc);
+            
+        
+
+        marker_f08a394588ad36b3c11c4de2cea4a64e.bindPopup(popup_d667f2059a8982611af2576c9015f97d)
+        ;
+
+        
+    
+    
+                marker_f08a394588ad36b3c11c4de2cea4a64e.setIcon(icon_b46f5b9ea67bfb22e11efd5546f4d1db);
+            
+    
+            var marker_acacdafdaeacc4ddb4bcf0a06b29c3aa = L.marker(
+                [35.0535, -80.8172],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_d3378cbc7666569e9d17ed9677ad4535 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32512ea7646a8ab45f07d4b7d2f12847 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eeb8a42c913103c0361677d253df841e = $(`<div id="html_eeb8a42c913103c0361677d253df841e" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28277<br>     Area: Ballantyne East<br>     Ozone: 35<br>     PM10: 14<br>     Pollution: Low<br>     PIST Score: 3<br>     Comment: Suburban clean air     </div>`)[0];
+                popup_32512ea7646a8ab45f07d4b7d2f12847.setContent(html_eeb8a42c913103c0361677d253df841e);
+            
+        
+
+        marker_acacdafdaeacc4ddb4bcf0a06b29c3aa.bindPopup(popup_32512ea7646a8ab45f07d4b7d2f12847)
+        ;
+
+        
+    
+    
+                marker_acacdafdaeacc4ddb4bcf0a06b29c3aa.setIcon(icon_d3378cbc7666569e9d17ed9677ad4535);
+            
+    
+            var marker_d843dc67a81552b8c787abeeaaaadc8a = L.marker(
+                [35.104, -80.8212],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_4156649877906ebe4a4009ffcf4618fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a05d0152f17d9ff2df0a10e80d49f97 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7b1e5a7594c8976c7cda4d72e9183f42 = $(`<div id="html_7b1e5a7594c8976c7cda4d72e9183f42" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28226<br>     Area: Ballantyne<br>     Ozone: 35<br>     PM10: 14<br>     Pollution: Low<br>     PIST Score: 3<br>     Comment: Low density zone     </div>`)[0];
+                popup_7a05d0152f17d9ff2df0a10e80d49f97.setContent(html_7b1e5a7594c8976c7cda4d72e9183f42);
+            
+        
+
+        marker_d843dc67a81552b8c787abeeaaaadc8a.bindPopup(popup_7a05d0152f17d9ff2df0a10e80d49f97)
+        ;
+
+        
+    
+    
+                marker_d843dc67a81552b8c787abeeaaaadc8a.setIcon(icon_4156649877906ebe4a4009ffcf4618fc);
+            
+    
+            var marker_7afaa6b2928d4b4c67dc256d36ccc310 = L.marker(
+                [35.2948, -80.7271],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_c2fffc50d0b969a1b540b42c9bd6078f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b76af56d1bba1e29b300d175646d4964 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d36309d68be25ded4963784e5bedd3f5 = $(`<div id="html_d36309d68be25ded4963784e5bedd3f5" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28213<br>     Area: University City<br>     Ozone: 32<br>     PM10: 16<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Student housing     </div>`)[0];
+                popup_b76af56d1bba1e29b300d175646d4964.setContent(html_d36309d68be25ded4963784e5bedd3f5);
+            
+        
+
+        marker_7afaa6b2928d4b4c67dc256d36ccc310.bindPopup(popup_b76af56d1bba1e29b300d175646d4964)
+        ;
+
+        
+    
+    
+                marker_7afaa6b2928d4b4c67dc256d36ccc310.setIcon(icon_c2fffc50d0b969a1b540b42c9bd6078f);
+            
+    
+            var marker_0ce4e426b2f3834d1d3cfec7482e2af7 = L.marker(
+                [35.2807, -80.9827],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_661064f74b8cce029449dd57f2dd1c85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d3889ea44fc15e0d3a2ca7dabc61417 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3452a6b5b03118ac27e7fabf5769365b = $(`<div id="html_3452a6b5b03118ac27e7fabf5769365b" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28214<br>     Area: Mountain Island<br>     Ozone: 31<br>     PM10: 17<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Reservoir nearby     </div>`)[0];
+                popup_7d3889ea44fc15e0d3a2ca7dabc61417.setContent(html_3452a6b5b03118ac27e7fabf5769365b);
+            
+        
+
+        marker_0ce4e426b2f3834d1d3cfec7482e2af7.bindPopup(popup_7d3889ea44fc15e0d3a2ca7dabc61417)
+        ;
+
+        
+    
+    
+                marker_0ce4e426b2f3834d1d3cfec7482e2af7.setIcon(icon_661064f74b8cce029449dd57f2dd1c85);
+            
+    
+            var marker_3d5ef458c88e03fcc4f8945eaea2868c = L.marker(
+                [35.2532, -80.7151],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_427dc97e2a7afe4d2847fb15ad6ee5f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db46ce486994c2608841068465b43077 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7811eabfc0a777e5c2eecb3154673ee1 = $(`<div id="html_7811eabfc0a777e5c2eecb3154673ee1" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28215<br>     Area: Eastland<br>     Ozone: 30<br>     PM10: 18<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Mixed use area     </div>`)[0];
+                popup_db46ce486994c2608841068465b43077.setContent(html_7811eabfc0a777e5c2eecb3154673ee1);
+            
+        
+
+        marker_3d5ef458c88e03fcc4f8945eaea2868c.bindPopup(popup_db46ce486994c2608841068465b43077)
+        ;
+
+        
+    
+    
+                marker_3d5ef458c88e03fcc4f8945eaea2868c.setIcon(icon_427dc97e2a7afe4d2847fb15ad6ee5f9);
+            
+    
+            var marker_3e94ed3a80484855530675b27f09a60a = L.marker(
+                [35.1752, -80.9155],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_1bae171348bfdd3802c6556997d25a63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e95589767098aad9007e6d141ec8839 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_515e9e1a561349944ce5d480edecbf0c = $(`<div id="html_515e9e1a561349944ce5d480edecbf0c" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28217<br>     Area: Yorkmount<br>     Ozone: 32<br>     PM10: 18<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Industrial activity     </div>`)[0];
+                popup_9e95589767098aad9007e6d141ec8839.setContent(html_515e9e1a561349944ce5d480edecbf0c);
+            
+        
+
+        marker_3e94ed3a80484855530675b27f09a60a.bindPopup(popup_9e95589767098aad9007e6d141ec8839)
+        ;
+
+        
+    
+    
+                marker_3e94ed3a80484855530675b27f09a60a.setIcon(icon_1bae171348bfdd3802c6556997d25a63);
+            
+    
+            var marker_b6e098b4cef4eb94c82309ef9ef70e17 = L.marker(
+                [35.323, -80.866],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_d8881162b71b9645858c9ccbc2d53e31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e0f652ee54532823896c2dbfe18c5b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de12eafb592a5ac2cebd641928e9087a = $(`<div id="html_de12eafb592a5ac2cebd641928e9087a" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28266<br>     Area: Northlake<br>     Ozone: 32<br>     PM10: 18<br>     Pollution: Moderate<br>     PIST Score: 2<br>     Comment: Retail expansion     </div>`)[0];
+                popup_8e0f652ee54532823896c2dbfe18c5b4.setContent(html_de12eafb592a5ac2cebd641928e9087a);
+            
+        
+
+        marker_b6e098b4cef4eb94c82309ef9ef70e17.bindPopup(popup_8e0f652ee54532823896c2dbfe18c5b4)
+        ;
+
+        
+    
+    
+                marker_b6e098b4cef4eb94c82309ef9ef70e17.setIcon(icon_d8881162b71b9645858c9ccbc2d53e31);
+            
+    
+            var marker_69bcb986cefa2921e09554432030fa04 = L.marker(
+                [35.336, -80.801],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_ec7e154cfbf5df4284c6cc996e037440 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88400092bc40941b1936e6845e915e2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_718a0c837eca9ca82497cbc50ce2711b = $(`<div id="html_718a0c837eca9ca82497cbc50ce2711b" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28269<br>     Area: Derita<br>     Ozone: 31<br>     PM10: 20<br>     Pollution: High<br>     PIST Score: 1<br>     Comment: Congested highway     </div>`)[0];
+                popup_88400092bc40941b1936e6845e915e2f.setContent(html_718a0c837eca9ca82497cbc50ce2711b);
+            
+        
+
+        marker_69bcb986cefa2921e09554432030fa04.bindPopup(popup_88400092bc40941b1936e6845e915e2f)
+        ;
+
+        
+    
+    
+                marker_69bcb986cefa2921e09554432030fa04.setIcon(icon_ec7e154cfbf5df4284c6cc996e037440);
+            
+    
+            var marker_9f4f55706775021a5963420e80a47314 = L.marker(
+                [35.213, -80.8278],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_59cc1eef2f69ab5b81a74b46d03a0041 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46daaa9d8afc84675208f150d85a3493 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e2c5b47f1f290ffe5e28c23936e1823 = $(`<div id="html_9e2c5b47f1f290ffe5e28c23936e1823" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28204<br>     Area: Elizabeth<br>     Ozone: 30<br>     PM10: 14<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_46daaa9d8afc84675208f150d85a3493.setContent(html_9e2c5b47f1f290ffe5e28c23936e1823);
+            
+        
+
+        marker_9f4f55706775021a5963420e80a47314.bindPopup(popup_46daaa9d8afc84675208f150d85a3493)
+        ;
+
+        
+    
+    
+                marker_9f4f55706775021a5963420e80a47314.setIcon(icon_59cc1eef2f69ab5b81a74b46d03a0041);
+            
+    
+            var marker_0f5557cd1dcad8fcab33c9bfe9b0ebe8 = L.marker(
+                [35.198, -80.8275],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_e5fd5acf14426b49b60d9fa1ed72eaa6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d20dcb6f72f6b9ffed510640c42dee3d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_009f7fdf2d31b0a8669cb0dd9cc8e59c = $(`<div id="html_009f7fdf2d31b0a8669cb0dd9cc8e59c" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28207<br>     Area: Myers Park<br>     Ozone: 30<br>     PM10: 14<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_d20dcb6f72f6b9ffed510640c42dee3d.setContent(html_009f7fdf2d31b0a8669cb0dd9cc8e59c);
+            
+        
+
+        marker_0f5557cd1dcad8fcab33c9bfe9b0ebe8.bindPopup(popup_d20dcb6f72f6b9ffed510640c42dee3d)
+        ;
+
+        
+    
+    
+                marker_0f5557cd1dcad8fcab33c9bfe9b0ebe8.setIcon(icon_e5fd5acf14426b49b60d9fa1ed72eaa6);
+            
+    
+            var marker_789e545162365263eeff00cd171c33c9 = L.marker(
+                [35.0873, -80.7656],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_cf5bc7102c11be80c0a04e6b33f2e2d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7db30675055f5dccf3ab69575bec2513 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22aa06666d52fc1349931cc0e8dddc87 = $(`<div id="html_22aa06666d52fc1349931cc0e8dddc87" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28270<br>     Area: Providence<br>     Ozone: 29<br>     PM10: 13<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_7db30675055f5dccf3ab69575bec2513.setContent(html_22aa06666d52fc1349931cc0e8dddc87);
+            
+        
+
+        marker_789e545162365263eeff00cd171c33c9.bindPopup(popup_7db30675055f5dccf3ab69575bec2513)
+        ;
+
+        
+    
+    
+                marker_789e545162365263eeff00cd171c33c9.setIcon(icon_cf5bc7102c11be80c0a04e6b33f2e2d4);
+            
+    
+            var marker_00921d0254ddb4c747e632fcdd938729 = L.marker(
+                [35.1796, -80.6599],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_74fc2873b9b84fc853773d0ee211e2e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f2a8f0b39b82ca47c837384baf02cf8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25248789ac92b5fd22c33669aac67fac = $(`<div id="html_25248789ac92b5fd22c33669aac67fac" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28227<br>     Area: Mint Hill<br>     Ozone: 28<br>     PM10: 13<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_6f2a8f0b39b82ca47c837384baf02cf8.setContent(html_25248789ac92b5fd22c33669aac67fac);
+            
+        
+
+        marker_00921d0254ddb4c747e632fcdd938729.bindPopup(popup_6f2a8f0b39b82ca47c837384baf02cf8)
+        ;
+
+        
+    
+    
+                marker_00921d0254ddb4c747e632fcdd938729.setIcon(icon_74fc2873b9b84fc853773d0ee211e2e9);
+            
+    
+            var marker_5183155e0559c8bb0b5403f1ad1b4496 = L.marker(
+                [35.1241, -80.958],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_635a3f619dddfeefd73919a507caacca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea77a45506b35146da09ff7347befbf0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d13a152b4263de6f55f54e6cb6aab2a2 = $(`<div id="html_d13a152b4263de6f55f54e6cb6aab2a2" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28273<br>     Area: Yorkmount West<br>     Ozone: 30<br>     PM10: 14<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_ea77a45506b35146da09ff7347befbf0.setContent(html_d13a152b4263de6f55f54e6cb6aab2a2);
+            
+        
+
+        marker_5183155e0559c8bb0b5403f1ad1b4496.bindPopup(popup_ea77a45506b35146da09ff7347befbf0)
+        ;
+
+        
+    
+    
+                marker_5183155e0559c8bb0b5403f1ad1b4496.setIcon(icon_635a3f619dddfeefd73919a507caacca);
+            
+    
+            var marker_22377165b94dfa49b5184ed07ec148f0 = L.marker(
+                [35.1792, -80.9055],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_1e41bce94da16c6129a27bbcd432cfc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8fb1af2a0582e893e7d743424b892a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49c4092026bee0adf30384f413c353b8 = $(`<div id="html_49c4092026bee0adf30384f413c353b8" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28217<br>     Area: Clanton Park<br>     Ozone: 30<br>     PM10: 14<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_e8fb1af2a0582e893e7d743424b892a4.setContent(html_49c4092026bee0adf30384f413c353b8);
+            
+        
+
+        marker_22377165b94dfa49b5184ed07ec148f0.bindPopup(popup_e8fb1af2a0582e893e7d743424b892a4)
+        ;
+
+        
+    
+    
+                marker_22377165b94dfa49b5184ed07ec148f0.setIcon(icon_1e41bce94da16c6129a27bbcd432cfc4);
+            
+    
+            var marker_264b6db5e66a17a69d4cbfe2fce63092 = L.marker(
+                [35.1, -80.997],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_002578bc7cf048d152d9256bfbae91d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1efb215281173c7c9c60fd55a152bb1e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_81bfb482942abab2fb09806e09a5da3e = $(`<div id="html_81bfb482942abab2fb09806e09a5da3e" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28278<br>     Area: Steele Creek<br>     Ozone: 30<br>     PM10: 13<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_1efb215281173c7c9c60fd55a152bb1e.setContent(html_81bfb482942abab2fb09806e09a5da3e);
+            
+        
+
+        marker_264b6db5e66a17a69d4cbfe2fce63092.bindPopup(popup_1efb215281173c7c9c60fd55a152bb1e)
+        ;
+
+        
+    
+    
+                marker_264b6db5e66a17a69d4cbfe2fce63092.setIcon(icon_002578bc7cf048d152d9256bfbae91d3);
+            
+    
+            var marker_13a6d90e401849675c474d3c46457f25 = L.marker(
+                [35.3451, -80.8769],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_c3584455962d15dd111ae31f4cc25685 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0ae9e9ee73a3acd4fc90c8a6690aec4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d7180805c4ef9c00138cc3645872e29c = $(`<div id="html_d7180805c4ef9c00138cc3645872e29c" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28266<br>     Area: North Lake<br>     Ozone: 29<br>     PM10: 12<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_c0ae9e9ee73a3acd4fc90c8a6690aec4.setContent(html_d7180805c4ef9c00138cc3645872e29c);
+            
+        
+
+        marker_13a6d90e401849675c474d3c46457f25.bindPopup(popup_c0ae9e9ee73a3acd4fc90c8a6690aec4)
+        ;
+
+        
+    
+    
+                marker_13a6d90e401849675c474d3c46457f25.setIcon(icon_c3584455962d15dd111ae31f4cc25685);
+            
+    
+            var marker_b2b8f9933a95dad7e24dc2ebf8c2c470 = L.marker(
+                [35.2444, -80.73],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_4faa94d886dd9de70813f260ba0993fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b609dfc9212bc98441ced6e7d80c9724 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_567b318e0075e6971930ff2c7c91ba6e = $(`<div id="html_567b318e0075e6971930ff2c7c91ba6e" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28215<br>     Area: Eastway<br>     Ozone: 30<br>     PM10: 14<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_b609dfc9212bc98441ced6e7d80c9724.setContent(html_567b318e0075e6971930ff2c7c91ba6e);
+            
+        
+
+        marker_b2b8f9933a95dad7e24dc2ebf8c2c470.bindPopup(popup_b609dfc9212bc98441ced6e7d80c9724)
+        ;
+
+        
+    
+    
+                marker_b2b8f9933a95dad7e24dc2ebf8c2c470.setIcon(icon_4faa94d886dd9de70813f260ba0993fb);
+            
+    
+            var marker_4df96e9296500cce0f469698c93380a3 = L.marker(
+                [35.36, -80.841],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_41dceef0b155ea26bdfc0c987795f310 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a916b7972e2e4c2cdbd449fbf01a0f66 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fcded6b596234b38f7a838272378073a = $(`<div id="html_fcded6b596234b38f7a838272378073a" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28269<br>     Area: Henderson Circle<br>     Ozone: 29<br>     PM10: 13<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed site with excellent air and water quality     </div>`)[0];
+                popup_a916b7972e2e4c2cdbd449fbf01a0f66.setContent(html_fcded6b596234b38f7a838272378073a);
+            
+        
+
+        marker_4df96e9296500cce0f469698c93380a3.bindPopup(popup_a916b7972e2e4c2cdbd449fbf01a0f66)
+        ;
+
+        
+    
+    
+                marker_4df96e9296500cce0f469698c93380a3.setIcon(icon_41dceef0b155ea26bdfc0c987795f310);
+            
+    
+            var marker_30dadcfd0fa5f3c03ea07fc18820de45 = L.marker(
+                [35.4993, -80.8487],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_5348cb71728f797cebf6a28cd6e4ba38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ad64ac64be7dcb445f23ec2b1cece56 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d391f44530940c581ea4fee31a27ae36 = $(`<div id="html_d391f44530940c581ea4fee31a27ae36" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28036<br>     Area: Davidson<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_1ad64ac64be7dcb445f23ec2b1cece56.setContent(html_d391f44530940c581ea4fee31a27ae36);
+            
+        
+
+        marker_30dadcfd0fa5f3c03ea07fc18820de45.bindPopup(popup_1ad64ac64be7dcb445f23ec2b1cece56)
+        ;
+
+        
+    
+    
+                marker_30dadcfd0fa5f3c03ea07fc18820de45.setIcon(icon_5348cb71728f797cebf6a28cd6e4ba38);
+            
+    
+            var marker_2a2c483c2500bb1bb3638f965d59ee30 = L.marker(
+                [35.4781, -80.8932],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_c766e6ca86b1a780d7e920c2278bbf52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49ee43246d2a86638af50bde30331e51 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ddb7c8683c6c3636d019472c58fba9b = $(`<div id="html_4ddb7c8683c6c3636d019472c58fba9b" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28031<br>     Area: Jetton Park<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_49ee43246d2a86638af50bde30331e51.setContent(html_4ddb7c8683c6c3636d019472c58fba9b);
+            
+        
+
+        marker_2a2c483c2500bb1bb3638f965d59ee30.bindPopup(popup_49ee43246d2a86638af50bde30331e51)
+        ;
+
+        
+    
+    
+                marker_2a2c483c2500bb1bb3638f965d59ee30.setIcon(icon_c766e6ca86b1a780d7e920c2278bbf52);
+            
+    
+            var marker_df6b01e21fdc16e29658a240ae4873b7 = L.marker(
+                [35.4422, -80.8825],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_04334122901cad53086ef4545dc3a59e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e44c7f394cba23125ef6ae8a4dc5739b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6614151efaa5a6ddb1ae6a325005a92a = $(`<div id="html_6614151efaa5a6ddb1ae6a325005a92a" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28078<br>     Area: Birkdale Village<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_e44c7f394cba23125ef6ae8a4dc5739b.setContent(html_6614151efaa5a6ddb1ae6a325005a92a);
+            
+        
+
+        marker_df6b01e21fdc16e29658a240ae4873b7.bindPopup(popup_e44c7f394cba23125ef6ae8a4dc5739b)
+        ;
+
+        
+    
+    
+                marker_df6b01e21fdc16e29658a240ae4873b7.setIcon(icon_04334122901cad53086ef4545dc3a59e);
+            
+    
+            var marker_9ebec78f9fe581fea7dda1e39cc74556 = L.marker(
+                [35.1551, -80.821],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_f73aa25339ce9d2447d709a6593560ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_487020cc51731780de0102e9fb49801d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_52b2a9dd39cffe34a70049b1e0376efb = $(`<div id="html_52b2a9dd39cffe34a70049b1e0376efb" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28211<br>     Area: Foxcroft<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_487020cc51731780de0102e9fb49801d.setContent(html_52b2a9dd39cffe34a70049b1e0376efb);
+            
+        
+
+        marker_9ebec78f9fe581fea7dda1e39cc74556.bindPopup(popup_487020cc51731780de0102e9fb49801d)
+        ;
+
+        
+    
+    
+                marker_9ebec78f9fe581fea7dda1e39cc74556.setIcon(icon_f73aa25339ce9d2447d709a6593560ca);
+            
+    
+            var marker_62ab3b26f538149205776ec064e878f4 = L.marker(
+                [35.1048, -80.7654],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_b0474233cf97a1d27ad499ac6996b7de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f8bd8e28c6f0f87b26cfe71bb168f1c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_541b8b569dd32a785fb4ac8b4d82e429 = $(`<div id="html_541b8b569dd32a785fb4ac8b4d82e429" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28270<br>     Area: Hembstead<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_7f8bd8e28c6f0f87b26cfe71bb168f1c.setContent(html_541b8b569dd32a785fb4ac8b4d82e429);
+            
+        
+
+        marker_62ab3b26f538149205776ec064e878f4.bindPopup(popup_7f8bd8e28c6f0f87b26cfe71bb168f1c)
+        ;
+
+        
+    
+    
+                marker_62ab3b26f538149205776ec064e878f4.setIcon(icon_b0474233cf97a1d27ad499ac6996b7de);
+            
+    
+            var marker_4d1cdb7650d433fa91f9aca6dd97b2a4 = L.marker(
+                [35.1152, -80.8324],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_7be3204de79c432aeffe5658a6ee5d9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9ccb08638112f7854af98a70c9d76893 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_667b39cec82b27e19e519e968abdfe58 = $(`<div id="html_667b39cec82b27e19e519e968abdfe58" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28226<br>     Area: Montibello<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_9ccb08638112f7854af98a70c9d76893.setContent(html_667b39cec82b27e19e519e968abdfe58);
+            
+        
+
+        marker_4d1cdb7650d433fa91f9aca6dd97b2a4.bindPopup(popup_9ccb08638112f7854af98a70c9d76893)
+        ;
+
+        
+    
+    
+                marker_4d1cdb7650d433fa91f9aca6dd97b2a4.setIcon(icon_7be3204de79c432aeffe5658a6ee5d9e);
+            
+    
+            var marker_13574d7d2bdf9888339f26f9d6c5224f = L.marker(
+                [35.1168, -80.7169],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_2d083bacd1f5864c7f87c493905fde01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50cf1b83c1932adfa7beb84bb5dfd934 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79306b74bc0c56fb2e856a6cefa60a53 = $(`<div id="html_79306b74bc0c56fb2e856a6cefa60a53" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28105<br>     Area: Matthews – Sardis Forest<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_50cf1b83c1932adfa7beb84bb5dfd934.setContent(html_79306b74bc0c56fb2e856a6cefa60a53);
+            
+        
+
+        marker_13574d7d2bdf9888339f26f9d6c5224f.bindPopup(popup_50cf1b83c1932adfa7beb84bb5dfd934)
+        ;
+
+        
+    
+    
+                marker_13574d7d2bdf9888339f26f9d6c5224f.setIcon(icon_2d083bacd1f5864c7f87c493905fde01);
+            
+    
+            var marker_9ca87a18a10bbb8308f4f95de707c02b = L.marker(
+                [35.0329, -80.8253],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_6b50cbb9b19b6c95bac2d335f8cff7df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f7f11b1d6a87ab06fc16eeb1b791136 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e1c9d1cbb8368f71b85076e672ba8f43 = $(`<div id="html_e1c9d1cbb8368f71b85076e672ba8f43" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28277<br>     Area: Stone Creek Ranch<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_6f7f11b1d6a87ab06fc16eeb1b791136.setContent(html_e1c9d1cbb8368f71b85076e672ba8f43);
+            
+        
+
+        marker_9ca87a18a10bbb8308f4f95de707c02b.bindPopup(popup_6f7f11b1d6a87ab06fc16eeb1b791136)
+        ;
+
+        
+    
+    
+                marker_9ca87a18a10bbb8308f4f95de707c02b.setIcon(icon_6b50cbb9b19b6c95bac2d335f8cff7df);
+            
+    
+            var marker_2947357329ce77892a16f5cd342fe8d3 = L.marker(
+                [35.0884, -80.8884],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_88ed66cf91e3db4bf9fd83d77e6f3911 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15f935bf528503de6ac720bd321b699d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cd87c76684bb28d6318dc33bdc89099c = $(`<div id="html_cd87c76684bb28d6318dc33bdc89099c" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28134<br>     Area: Pineville – Cardinal Woods<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_15f935bf528503de6ac720bd321b699d.setContent(html_cd87c76684bb28d6318dc33bdc89099c);
+            
+        
+
+        marker_2947357329ce77892a16f5cd342fe8d3.bindPopup(popup_15f935bf528503de6ac720bd321b699d)
+        ;
+
+        
+    
+    
+                marker_2947357329ce77892a16f5cd342fe8d3.setIcon(icon_88ed66cf91e3db4bf9fd83d77e6f3911);
+            
+    
+            var marker_86958d82d698eb095876bc89acdfd331 = L.marker(
+                [35.2651, -80.4364],
+                {
+}
+            ).addTo(marker_cluster_f0eee846c97b913aea67dd6826f21958);
+        
+    
+            var icon_586f8e36ebd6ebd2ce49f041886e20fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17d53df65af31bdf31d665ecbd43415a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d38932a855a4d6b3ed9970b4bc29c005 = $(`<div id="html_d38932a855a4d6b3ed9970b4bc29c005" style="width: 100.0%; height: 100.0%;">     <b>Community Overview</b><br>     ZIP Code: 28097<br>     Area: Locust<br>     Ozone: -<br>     PM10: -<br>     Pollution: Very Good<br>     PIST Score: 4<br>     Comment: Proposed safest site with no crime and excellent air     </div>`)[0];
+                popup_17d53df65af31bdf31d665ecbd43415a.setContent(html_d38932a855a4d6b3ed9970b4bc29c005);
+            
+        
+
+        marker_86958d82d698eb095876bc89acdfd331.bindPopup(popup_17d53df65af31bdf31d665ecbd43415a)
+        ;
+
+        
+    
+    
+                marker_86958d82d698eb095876bc89acdfd331.setIcon(icon_586f8e36ebd6ebd2ce49f041886e20fb);
+            
+    
+            marker_cluster_f0eee846c97b913aea67dd6826f21958.addTo(map_5e24d501d62335966dc499948f3d028b);
+        
+    
+            tile_layer_dc47dcf00d0a9f48304b8bd7951e9eb9.addTo(map_5e24d501d62335966dc499948f3d028b);
+        
+    
+                marker_ba7d20a2481a706948975e23971ff3e3.setIcon(icon_b77f164c6efd5eeb43ae457ebee0866a);
+            
+    
+                marker_a778cd9eef1a7adbb6a730537cfb77f7.setIcon(icon_ff8cf6f5b94909d01063c38e0b5040cb);
+            
+    
+                marker_5e6b0572e27515a68d2028885c8b6b89.setIcon(icon_726b90156849838d66f72048670d9899);
+            
+    
+                marker_02602630bffad083acc407e78faada6f.setIcon(icon_88d72bddc96298827e4e231dbc8dc317);
+            
+    
+                marker_4d391682bd12233601641160824257e4.setIcon(icon_f44d3d838e9487a88b105358854610f0);
+            
+    
+                marker_0199afa19ef22c7f733a08b0ce69d4a5.setIcon(icon_374c80c50ba5246b442c30aec7f2d9a0);
+            
+    
+                marker_3f641a5d78c0c248186be589e0c3397b.setIcon(icon_f006b781db341a40c45280d185f41862);
+            
+    
+                marker_c6787786f6a1edea2231e035a9c0f2c7.setIcon(icon_e0579c4ef1fee6cb56213d91c350d06f);
+            
+    
+                marker_f08a394588ad36b3c11c4de2cea4a64e.setIcon(icon_b46f5b9ea67bfb22e11efd5546f4d1db);
+            
+    
+                marker_acacdafdaeacc4ddb4bcf0a06b29c3aa.setIcon(icon_d3378cbc7666569e9d17ed9677ad4535);
+            
+    
+                marker_d843dc67a81552b8c787abeeaaaadc8a.setIcon(icon_4156649877906ebe4a4009ffcf4618fc);
+            
+    
+                marker_7afaa6b2928d4b4c67dc256d36ccc310.setIcon(icon_c2fffc50d0b969a1b540b42c9bd6078f);
+            
+    
+                marker_0ce4e426b2f3834d1d3cfec7482e2af7.setIcon(icon_661064f74b8cce029449dd57f2dd1c85);
+            
+    
+                marker_3d5ef458c88e03fcc4f8945eaea2868c.setIcon(icon_427dc97e2a7afe4d2847fb15ad6ee5f9);
+            
+    
+                marker_3e94ed3a80484855530675b27f09a60a.setIcon(icon_1bae171348bfdd3802c6556997d25a63);
+            
+    
+                marker_b6e098b4cef4eb94c82309ef9ef70e17.setIcon(icon_d8881162b71b9645858c9ccbc2d53e31);
+            
+    
+                marker_69bcb986cefa2921e09554432030fa04.setIcon(icon_ec7e154cfbf5df4284c6cc996e037440);
+            
+    
+                marker_9f4f55706775021a5963420e80a47314.setIcon(icon_59cc1eef2f69ab5b81a74b46d03a0041);
+            
+    
+                marker_0f5557cd1dcad8fcab33c9bfe9b0ebe8.setIcon(icon_e5fd5acf14426b49b60d9fa1ed72eaa6);
+            
+    
+                marker_789e545162365263eeff00cd171c33c9.setIcon(icon_cf5bc7102c11be80c0a04e6b33f2e2d4);
+            
+    
+                marker_00921d0254ddb4c747e632fcdd938729.setIcon(icon_74fc2873b9b84fc853773d0ee211e2e9);
+            
+    
+                marker_5183155e0559c8bb0b5403f1ad1b4496.setIcon(icon_635a3f619dddfeefd73919a507caacca);
+            
+    
+                marker_22377165b94dfa49b5184ed07ec148f0.setIcon(icon_1e41bce94da16c6129a27bbcd432cfc4);
+            
+    
+                marker_264b6db5e66a17a69d4cbfe2fce63092.setIcon(icon_002578bc7cf048d152d9256bfbae91d3);
+            
+    
+                marker_13a6d90e401849675c474d3c46457f25.setIcon(icon_c3584455962d15dd111ae31f4cc25685);
+            
+    
+                marker_b2b8f9933a95dad7e24dc2ebf8c2c470.setIcon(icon_4faa94d886dd9de70813f260ba0993fb);
+            
+    
+                marker_4df96e9296500cce0f469698c93380a3.setIcon(icon_41dceef0b155ea26bdfc0c987795f310);
+            
+    
+                marker_30dadcfd0fa5f3c03ea07fc18820de45.setIcon(icon_5348cb71728f797cebf6a28cd6e4ba38);
+            
+    
+                marker_2a2c483c2500bb1bb3638f965d59ee30.setIcon(icon_c766e6ca86b1a780d7e920c2278bbf52);
+            
+    
+                marker_df6b01e21fdc16e29658a240ae4873b7.setIcon(icon_04334122901cad53086ef4545dc3a59e);
+            
+    
+                marker_9ebec78f9fe581fea7dda1e39cc74556.setIcon(icon_f73aa25339ce9d2447d709a6593560ca);
+            
+    
+                marker_62ab3b26f538149205776ec064e878f4.setIcon(icon_b0474233cf97a1d27ad499ac6996b7de);
+            
+    
+                marker_4d1cdb7650d433fa91f9aca6dd97b2a4.setIcon(icon_7be3204de79c432aeffe5658a6ee5d9e);
+            
+    
+                marker_13574d7d2bdf9888339f26f9d6c5224f.setIcon(icon_2d083bacd1f5864c7f87c493905fde01);
+            
+    
+                marker_9ca87a18a10bbb8308f4f95de707c02b.setIcon(icon_6b50cbb9b19b6c95bac2d335f8cff7df);
+            
+    
+                marker_2947357329ce77892a16f5cd342fe8d3.setIcon(icon_88ed66cf91e3db4bf9fd83d77e6f3911);
+            
+    
+                marker_86958d82d698eb095876bc89acdfd331.setIcon(icon_586f8e36ebd6ebd2ce49f041886e20fb);
+            
+    
+            marker_cluster_f0eee846c97b913aea67dd6826f21958.addTo(map_5e24d501d62335966dc499948f3d028b);
+        
+</script>
+</html>

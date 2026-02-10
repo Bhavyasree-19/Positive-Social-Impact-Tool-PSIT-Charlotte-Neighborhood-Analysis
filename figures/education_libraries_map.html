@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_88a814e220077e60268bfcbb1333b8e1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_88a814e220077e60268bfcbb1333b8e1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_88a814e220077e60268bfcbb1333b8e1 = L.map(
+                "map_88a814e220077e60268bfcbb1333b8e1",
+                {
+                    center: [35.2271, -80.8431],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e89b692fec0051c4f4dc4fd982ce40fd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e89b692fec0051c4f4dc4fd982ce40fd.addTo(map_88a814e220077e60268bfcbb1333b8e1);
+        
+    
+            var marker_cluster_1ba87722948cb5022f8054cc2f7acf5b = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_809d47c8b4eefefbc5ec3280b35272ff = L.marker(
+                [35.2327, -80.8544],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_878aff9d7afec7acb950551243c4bd1e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c364578964691e380cdb2fe7fc4b9209 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_af03f1fbd012236e83623ce80513baa1 = $(`<div id="html_af03f1fbd012236e83623ce80513baa1" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Johnson & Wales University<br>         <b>📬 ZIP:</b> 28202<br>         <b>⭐ Rating:</b> B+<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_c364578964691e380cdb2fe7fc4b9209.setContent(html_af03f1fbd012236e83623ce80513baa1);
+            
+        
+
+        marker_809d47c8b4eefefbc5ec3280b35272ff.bindPopup(popup_c364578964691e380cdb2fe7fc4b9209)
+        ;
+
+        
+    
+    
+                marker_809d47c8b4eefefbc5ec3280b35272ff.setIcon(icon_878aff9d7afec7acb950551243c4bd1e);
+            
+    
+            var marker_5e82d611d2030c3fefd1da1afb8df1a7 = L.marker(
+                [35.242, -80.8457],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_67a45fe5a54cb1aea52ebf8e8f7c5ce2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fa097875fafe558dbf5aba850785e92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_90fcba637e04305d04d63968e4c095fd = $(`<div id="html_90fcba637e04305d04d63968e4c095fd" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Johnson C. Smith University<br>         <b>📬 ZIP:</b> 28216<br>         <b>⭐ Rating:</b> C+<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_2fa097875fafe558dbf5aba850785e92.setContent(html_90fcba637e04305d04d63968e4c095fd);
+            
+        
+
+        marker_5e82d611d2030c3fefd1da1afb8df1a7.bindPopup(popup_2fa097875fafe558dbf5aba850785e92)
+        ;
+
+        
+    
+    
+                marker_5e82d611d2030c3fefd1da1afb8df1a7.setIcon(icon_67a45fe5a54cb1aea52ebf8e8f7c5ce2);
+            
+    
+            var marker_a96274194ffc6856ce25f56d8b94de4a = L.marker(
+                [35.2296, -80.8368],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_2add03e3845d073215be439eb25953ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd8990efd01a7e49ff395f56c50a8ce3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0d0ffe579c03add7c44430ce2c57bee7 = $(`<div id="html_0d0ffe579c03add7c44430ce2c57bee7" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Charlotte Lab School<br>         <b>📬 ZIP:</b> 28202<br>         <b>⭐ Rating:</b> B<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_fd8990efd01a7e49ff395f56c50a8ce3.setContent(html_0d0ffe579c03add7c44430ce2c57bee7);
+            
+        
+
+        marker_a96274194ffc6856ce25f56d8b94de4a.bindPopup(popup_fd8990efd01a7e49ff395f56c50a8ce3)
+        ;
+
+        
+    
+    
+                marker_a96274194ffc6856ce25f56d8b94de4a.setIcon(icon_2add03e3845d073215be439eb25953ba);
+            
+    
+            var marker_5b27c6835a9227835ec45d7f086e656f = L.marker(
+                [35.2099, -80.8515],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_4b115261625a461c1002b95f7b81023b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_823dff105cacdb4b367755939c793173 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2082d55491e0e8226fcdd8025371359d = $(`<div id="html_2082d55491e0e8226fcdd8025371359d" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Dilworth Elementary School: Latta Campus<br>         <b>📬 ZIP:</b> 28203<br>         <b>⭐ Rating:</b> A-<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_823dff105cacdb4b367755939c793173.setContent(html_2082d55491e0e8226fcdd8025371359d);
+            
+        
+
+        marker_5b27c6835a9227835ec45d7f086e656f.bindPopup(popup_823dff105cacdb4b367755939c793173)
+        ;
+
+        
+    
+    
+                marker_5b27c6835a9227835ec45d7f086e656f.setIcon(icon_4b115261625a461c1002b95f7b81023b);
+            
+    
+            var marker_3bb0c278f751acbc7531bd17ee0b3dfb = L.marker(
+                [35.2625, -80.8096],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_ad869642cd9c14bd2ba63f171833def8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35ffdae3a3d4a3ca275f1ba908889172 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e0b9971dc10f533690e7b8d0cc8162c4 = $(`<div id="html_e0b9971dc10f533690e7b8d0cc8162c4" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Highland Renaissance Academy<br>         <b>📬 ZIP:</b> 28206<br>         <b>⭐ Rating:</b> C<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_35ffdae3a3d4a3ca275f1ba908889172.setContent(html_e0b9971dc10f533690e7b8d0cc8162c4);
+            
+        
+
+        marker_3bb0c278f751acbc7531bd17ee0b3dfb.bindPopup(popup_35ffdae3a3d4a3ca275f1ba908889172)
+        ;
+
+        
+    
+    
+                marker_3bb0c278f751acbc7531bd17ee0b3dfb.setIcon(icon_ad869642cd9c14bd2ba63f171833def8);
+            
+    
+            var marker_d75cb7b07b6db42a61e1a30e46553a3b = L.marker(
+                [35.2434, -80.7962],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_0d5ceda66369385f409bd7115689f23c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_588f6803f6e59977963eedbb3dd54648 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5826588a9004708429075a433757bc91 = $(`<div id="html_5826588a9004708429075a433757bc91" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Villa Heights Elementary School<br>         <b>📬 ZIP:</b> 28205<br>         <b>⭐ Rating:</b> C<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_588f6803f6e59977963eedbb3dd54648.setContent(html_5826588a9004708429075a433757bc91);
+            
+        
+
+        marker_d75cb7b07b6db42a61e1a30e46553a3b.bindPopup(popup_588f6803f6e59977963eedbb3dd54648)
+        ;
+
+        
+    
+    
+                marker_d75cb7b07b6db42a61e1a30e46553a3b.setIcon(icon_0d5ceda66369385f409bd7115689f23c);
+            
+    
+            var marker_1811d16539eb4f76f332aa48dec9bb5b = L.marker(
+                [35.3076, -80.7336],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_58d2985c3a0d09a11144751c414f4cbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_abc473802122ad2414607150e6be3fbd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0fe5febe913750a1ca2c7d82b456d3cc = $(`<div id="html_0fe5febe913750a1ca2c7d82b456d3cc" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> University of North Carolina at Charlotte<br>         <b>📬 ZIP:</b> 28223<br>         <b>⭐ Rating:</b> B+<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_abc473802122ad2414607150e6be3fbd.setContent(html_0fe5febe913750a1ca2c7d82b456d3cc);
+            
+        
+
+        marker_1811d16539eb4f76f332aa48dec9bb5b.bindPopup(popup_abc473802122ad2414607150e6be3fbd)
+        ;
+
+        
+    
+    
+                marker_1811d16539eb4f76f332aa48dec9bb5b.setIcon(icon_58d2985c3a0d09a11144751c414f4cbb);
+            
+    
+            var marker_c89f1d40388cfbf7a0bff27e13d913ca = L.marker(
+                [35.362, -80.7526],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_811d7d247dec3c6330e208aa443be839 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0625c8056dc5a7264b73097a006a9263 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1a402416ca667d50121ddbee954698bb = $(`<div id="html_1a402416ca667d50121ddbee954698bb" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Mallard Creek High School<br>         <b>📬 ZIP:</b> 28269<br>         <b>⭐ Rating:</b> B+<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_0625c8056dc5a7264b73097a006a9263.setContent(html_1a402416ca667d50121ddbee954698bb);
+            
+        
+
+        marker_c89f1d40388cfbf7a0bff27e13d913ca.bindPopup(popup_0625c8056dc5a7264b73097a006a9263)
+        ;
+
+        
+    
+    
+                marker_c89f1d40388cfbf7a0bff27e13d913ca.setIcon(icon_811d7d247dec3c6330e208aa443be839);
+            
+    
+            var marker_ff33d715b3e8127c22b3caf80756ac8d = L.marker(
+                [35.228, -80.7905],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_33127dfe065a389029467ff7938306ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b314afdc838598f4a5f94e2219ba2fbe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf0a8a075cb92c81efcdd255e4d199a8 = $(`<div id="html_cf0a8a075cb92c81efcdd255e4d199a8" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Garinger High School<br>         <b>📬 ZIP:</b> 28205<br>         <b>⭐ Rating:</b> C<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_b314afdc838598f4a5f94e2219ba2fbe.setContent(html_cf0a8a075cb92c81efcdd255e4d199a8);
+            
+        
+
+        marker_ff33d715b3e8127c22b3caf80756ac8d.bindPopup(popup_b314afdc838598f4a5f94e2219ba2fbe)
+        ;
+
+        
+    
+    
+                marker_ff33d715b3e8127c22b3caf80756ac8d.setIcon(icon_33127dfe065a389029467ff7938306ef);
+            
+    
+            var marker_e7995c62f69daa42dcf5c831c333c837 = L.marker(
+                [35.1715, -80.7605],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_f2666e9f55b1ee27716622affb88b06d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_639f4cc90a0cd503b64ddda8e5f7ea80 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c5e9e4e9560308b64f546844a5eb1e3d = $(`<div id="html_c5e9e4e9560308b64f546844a5eb1e3d" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> East Mecklenburg High School<br>         <b>📬 ZIP:</b> 28212<br>         <b>⭐ Rating:</b> B<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_639f4cc90a0cd503b64ddda8e5f7ea80.setContent(html_c5e9e4e9560308b64f546844a5eb1e3d);
+            
+        
+
+        marker_e7995c62f69daa42dcf5c831c333c837.bindPopup(popup_639f4cc90a0cd503b64ddda8e5f7ea80)
+        ;
+
+        
+    
+    
+                marker_e7995c62f69daa42dcf5c831c333c837.setIcon(icon_f2666e9f55b1ee27716622affb88b06d);
+            
+    
+            var marker_f403886f8c19d1c150411e18caea3331 = L.marker(
+                [35.2757, -80.873],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_6b46e95520c1bdb8675f5d692894c49c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02a23239fdd8ada870efab234af5711d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a18b912a2c34a1ed7b2f0e782d34321c = $(`<div id="html_a18b912a2c34a1ed7b2f0e782d34321c" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> West Charlotte High School<br>         <b>📬 ZIP:</b> 28216<br>         <b>⭐ Rating:</b> C+<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_02a23239fdd8ada870efab234af5711d.setContent(html_a18b912a2c34a1ed7b2f0e782d34321c);
+            
+        
+
+        marker_f403886f8c19d1c150411e18caea3331.bindPopup(popup_02a23239fdd8ada870efab234af5711d)
+        ;
+
+        
+    
+    
+                marker_f403886f8c19d1c150411e18caea3331.setIcon(icon_6b46e95520c1bdb8675f5d692894c49c);
+            
+    
+            var marker_83fef60465e4dbdca82a19f44ec3d0ab = L.marker(
+                [35.2402, -80.8792],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_9a40fdc34c52b1a6865dfeb296f8bba0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d013701490c6f65bcd681b14113d772c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c93790cd4731c976db3180e2ca1af76a = $(`<div id="html_c93790cd4731c976db3180e2ca1af76a" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Phillip O. Berry Academy of Technology<br>         <b>📬 ZIP:</b> 28208<br>         <b>⭐ Rating:</b> B<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_d013701490c6f65bcd681b14113d772c.setContent(html_c93790cd4731c976db3180e2ca1af76a);
+            
+        
+
+        marker_83fef60465e4dbdca82a19f44ec3d0ab.bindPopup(popup_d013701490c6f65bcd681b14113d772c)
+        ;
+
+        
+    
+    
+                marker_83fef60465e4dbdca82a19f44ec3d0ab.setIcon(icon_9a40fdc34c52b1a6865dfeb296f8bba0);
+            
+    
+            var marker_a9b8e4c195b85c7834a3f20ea47afed5 = L.marker(
+                [35.0247, -80.8425],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_3cb9aaf11f1dffc4387cbdd07c6b8b71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e50b7c784da61b218315309168a8ea86 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d221fd78ee9094133f3dee43faa8cce = $(`<div id="html_6d221fd78ee9094133f3dee43faa8cce" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Ardrey Kell High School<br>         <b>📬 ZIP:</b> 28277<br>         <b>⭐ Rating:</b> A<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_e50b7c784da61b218315309168a8ea86.setContent(html_6d221fd78ee9094133f3dee43faa8cce);
+            
+        
+
+        marker_a9b8e4c195b85c7834a3f20ea47afed5.bindPopup(popup_e50b7c784da61b218315309168a8ea86)
+        ;
+
+        
+    
+    
+                marker_a9b8e4c195b85c7834a3f20ea47afed5.setIcon(icon_3cb9aaf11f1dffc4387cbdd07c6b8b71);
+            
+    
+            var marker_8b5e9341d837b4a321a13f9a434b96b4 = L.marker(
+                [35.106, -80.7614],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_323ed98dd81a786e37ad6cd1d5195930 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fca168fe5f0ccb51398e2c220e889ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5a3ee3fde0ddc50d3a160d97bc3a668 = $(`<div id="html_d5a3ee3fde0ddc50d3a160d97bc3a668" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Providence High School<br>         <b>📬 ZIP:</b> 28270<br>         <b>⭐ Rating:</b> A<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_2fca168fe5f0ccb51398e2c220e889ab.setContent(html_d5a3ee3fde0ddc50d3a160d97bc3a668);
+            
+        
+
+        marker_8b5e9341d837b4a321a13f9a434b96b4.bindPopup(popup_2fca168fe5f0ccb51398e2c220e889ab)
+        ;
+
+        
+    
+    
+                marker_8b5e9341d837b4a321a13f9a434b96b4.setIcon(icon_323ed98dd81a786e37ad6cd1d5195930);
+            
+    
+            var marker_3bc0fce5d10bc61ad9c59b2ed5e0cde7 = L.marker(
+                [35.0956, -80.7738],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_cb77440259c8286135698bc402403c80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5801dac21733025dd6612d90e200ae82 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2ce52246f4b3219352e6e7276c35dcd6 = $(`<div id="html_2ce52246f4b3219352e6e7276c35dcd6" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> Charlotte Latin School<br>         <b>📬 ZIP:</b> 28277<br>         <b>⭐ Rating:</b> A+<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_5801dac21733025dd6612d90e200ae82.setContent(html_2ce52246f4b3219352e6e7276c35dcd6);
+            
+        
+
+        marker_3bc0fce5d10bc61ad9c59b2ed5e0cde7.bindPopup(popup_5801dac21733025dd6612d90e200ae82)
+        ;
+
+        
+    
+    
+                marker_3bc0fce5d10bc61ad9c59b2ed5e0cde7.setIcon(icon_cb77440259c8286135698bc402403c80);
+            
+    
+            var marker_30ce5e245ab4127786ea7560c2755ede = L.marker(
+                [35.4568, -80.825],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_fb893b66a88e98237a78f16325d2754a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e102d6a98c00dabd04129dce955fc1ea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4389da4a63dff99707fa8e5f8f16ebc9 = $(`<div id="html_4389da4a63dff99707fa8e5f8f16ebc9" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> School<br>         <b>📍 Name:</b> William Amos Hough High School<br>         <b>📬 ZIP:</b> 28031<br>         <b>⭐ Rating:</b> A-<br>         <b>🎓 Grad %:</b> 90.0<br>         <b>🚶 Proximity:</b> Moderate<br>         <b>💬 Comment:</b> Integrated from FINAL_DATASET_CHARLOTTE<br>         <b>📊 PIST Score:</b> 3     </div>     </div>`)[0];
+                popup_e102d6a98c00dabd04129dce955fc1ea.setContent(html_4389da4a63dff99707fa8e5f8f16ebc9);
+            
+        
+
+        marker_30ce5e245ab4127786ea7560c2755ede.bindPopup(popup_e102d6a98c00dabd04129dce955fc1ea)
+        ;
+
+        
+    
+    
+                marker_30ce5e245ab4127786ea7560c2755ede.setIcon(icon_fb893b66a88e98237a78f16325d2754a);
+            
+    
+            var marker_394aec2ac7cc31e5f57317cc92727b24 = L.marker(
+                [35.1938, -80.7511],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_03265cb7eb1ccc3655a53d0b9475542f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed9b1757dcd8f8d40e0542ebe351f4de = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e3b6918b96a6db1b81c93bc34528fbe6 = $(`<div id="html_e3b6918b96a6db1b81c93bc34528fbe6" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Education<br>         <b>📍 Name:</b> Proposed School - Eastland Area<br>         <b>📬 ZIP:</b> 28212<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> High youth population, long commute to schools<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_ed9b1757dcd8f8d40e0542ebe351f4de.setContent(html_e3b6918b96a6db1b81c93bc34528fbe6);
+            
+        
+
+        marker_394aec2ac7cc31e5f57317cc92727b24.bindPopup(popup_ed9b1757dcd8f8d40e0542ebe351f4de)
+        ;
+
+        
+    
+    
+                marker_394aec2ac7cc31e5f57317cc92727b24.setIcon(icon_03265cb7eb1ccc3655a53d0b9475542f);
+            
+    
+            var marker_725cac4597ef30ca3e5784242a0b6fed = L.marker(
+                [35.2335, -80.8998],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_319873d39637cb3e1f04d1064a475018 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4001debc495bab5f09826627953916ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0f263567c887c7fc8460dd836701642f = $(`<div id="html_0f263567c887c7fc8460dd836701642f" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Education<br>         <b>📍 Name:</b> Proposed School - West Blvd<br>         <b>📬 ZIP:</b> 28208<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Lack of nearby high schools<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_4001debc495bab5f09826627953916ab.setContent(html_0f263567c887c7fc8460dd836701642f);
+            
+        
+
+        marker_725cac4597ef30ca3e5784242a0b6fed.bindPopup(popup_4001debc495bab5f09826627953916ab)
+        ;
+
+        
+    
+    
+                marker_725cac4597ef30ca3e5784242a0b6fed.setIcon(icon_319873d39637cb3e1f04d1064a475018);
+            
+    
+            var marker_1f85b631adea944fd1ee334b38280de1 = L.marker(
+                [35.3355, -80.8001],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_ce69799f88b5a110d63fbd252d9b2003 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4a46b5c4b0cc519dba99ef4b230e921 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4a212c342f419600a451f7ecddc4fa95 = $(`<div id="html_4a212c342f419600a451f7ecddc4fa95" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Education<br>         <b>📍 Name:</b> Proposed School - Sugar Creek<br>         <b>📬 ZIP:</b> 28269<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Rising student population<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_e4a46b5c4b0cc519dba99ef4b230e921.setContent(html_4a212c342f419600a451f7ecddc4fa95);
+            
+        
+
+        marker_1f85b631adea944fd1ee334b38280de1.bindPopup(popup_e4a46b5c4b0cc519dba99ef4b230e921)
+        ;
+
+        
+    
+    
+                marker_1f85b631adea944fd1ee334b38280de1.setIcon(icon_ce69799f88b5a110d63fbd252d9b2003);
+            
+    
+            var marker_33756681aa935920f4cfb55f2f8f0263 = L.marker(
+                [35.3034, -80.751],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_c59242474e0c61584a0a6d73d09f9ca0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_575a9850003b1eb15a98aef246f1c022 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dcd2824a793cfeae12fc9369866d19d = $(`<div id="html_8dcd2824a793cfeae12fc9369866d19d" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Education<br>         <b>📍 Name:</b> Proposed School - North Tryon<br>         <b>📬 ZIP:</b> 28213<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Fast growing family community<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_575a9850003b1eb15a98aef246f1c022.setContent(html_8dcd2824a793cfeae12fc9369866d19d);
+            
+        
+
+        marker_33756681aa935920f4cfb55f2f8f0263.bindPopup(popup_575a9850003b1eb15a98aef246f1c022)
+        ;
+
+        
+    
+    
+                marker_33756681aa935920f4cfb55f2f8f0263.setIcon(icon_c59242474e0c61584a0a6d73d09f9ca0);
+            
+    
+            var marker_02e2d6e9a61d8712e24116adc8edaf2a = L.marker(
+                [35.1738, -80.9104],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_be3f24cf94bc341f445a3875567fd858 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85ea0363d3453fc758bb6ce75bd840bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_da14ed62893d37f287b4a56d6ac93977 = $(`<div id="html_da14ed62893d37f287b4a56d6ac93977" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Education<br>         <b>📍 Name:</b> Proposed School - Nations Ford<br>         <b>📬 ZIP:</b> 28217<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Underserved by public schools<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_85ea0363d3453fc758bb6ce75bd840bf.setContent(html_da14ed62893d37f287b4a56d6ac93977);
+            
+        
+
+        marker_02e2d6e9a61d8712e24116adc8edaf2a.bindPopup(popup_85ea0363d3453fc758bb6ce75bd840bf)
+        ;
+
+        
+    
+    
+                marker_02e2d6e9a61d8712e24116adc8edaf2a.setIcon(icon_be3f24cf94bc341f445a3875567fd858);
+            
+    
+            var marker_d1fd5fe6b32dcb28a629ff4bbbd76c0a = L.marker(
+                [35.1998, -80.792],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_4dabd4d50a93cdc4f1cb6494a870f897 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_737d93fe3936ca358015e0b7eb3c91a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_33cf614f417ec7082ece52f441af77e1 = $(`<div id="html_33cf614f417ec7082ece52f441af77e1" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Library<br>         <b>📍 Name:</b> Proposed Library - Grier Heights<br>         <b>📬 ZIP:</b> 28205<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Dense neighborhood lacks public library<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_737d93fe3936ca358015e0b7eb3c91a6.setContent(html_33cf614f417ec7082ece52f441af77e1);
+            
+        
+
+        marker_d1fd5fe6b32dcb28a629ff4bbbd76c0a.bindPopup(popup_737d93fe3936ca358015e0b7eb3c91a6)
+        ;
+
+        
+    
+    
+                marker_d1fd5fe6b32dcb28a629ff4bbbd76c0a.setIcon(icon_4dabd4d50a93cdc4f1cb6494a870f897);
+            
+    
+            var marker_bb95d3b54d1041b5c27b92908383e120 = L.marker(
+                [35.2691, -80.7801],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_1521ab7f7bc439998beb8a5c2d721e70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46c02da7d412dfe2f09ee9f73c737523 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a33522f7fa971192040cfa30a1e71286 = $(`<div id="html_a33522f7fa971192040cfa30a1e71286" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Library<br>         <b>📍 Name:</b> Proposed Library - Hidden Valley<br>         <b>📬 ZIP:</b> 28213<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Youth-dominant region with limited access<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_46c02da7d412dfe2f09ee9f73c737523.setContent(html_a33522f7fa971192040cfa30a1e71286);
+            
+        
+
+        marker_bb95d3b54d1041b5c27b92908383e120.bindPopup(popup_46c02da7d412dfe2f09ee9f73c737523)
+        ;
+
+        
+    
+    
+                marker_bb95d3b54d1041b5c27b92908383e120.setIcon(icon_1521ab7f7bc439998beb8a5c2d721e70);
+            
+    
+            var marker_3bd0b11ef404683951c75dce7fcf684d = L.marker(
+                [35.1369, -80.9991],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_d291b1ef49ce2745b2761529ffddb698 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eefaf117752267eb7efc64584c8a4818 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c885701561d6bf6a24afd14cd5894055 = $(`<div id="html_c885701561d6bf6a24afd14cd5894055" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Library<br>         <b>📍 Name:</b> Proposed Library - Steele Creek<br>         <b>📬 ZIP:</b> 28273<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> No major library nearby for growing area<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_eefaf117752267eb7efc64584c8a4818.setContent(html_c885701561d6bf6a24afd14cd5894055);
+            
+        
+
+        marker_3bd0b11ef404683951c75dce7fcf684d.bindPopup(popup_eefaf117752267eb7efc64584c8a4818)
+        ;
+
+        
+    
+    
+                marker_3bd0b11ef404683951c75dce7fcf684d.setIcon(icon_d291b1ef49ce2745b2761529ffddb698);
+            
+    
+            var marker_cd8433fb50f91a9c68416b37a9316349 = L.marker(
+                [35.23, -80.7712],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_9a45cad56139aaef86bb29362d748035 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a33e40f863d0c6b6c790b6db5e26c13d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2fa70b9647b8a21af013f4064aff8934 = $(`<div id="html_2fa70b9647b8a21af013f4064aff8934" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Library<br>         <b>📍 Name:</b> Proposed Library - Eastway Dr<br>         <b>📬 ZIP:</b> 28205<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> Underserved by digital and reading spaces<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_a33e40f863d0c6b6c790b6db5e26c13d.setContent(html_2fa70b9647b8a21af013f4064aff8934);
+            
+        
+
+        marker_cd8433fb50f91a9c68416b37a9316349.bindPopup(popup_a33e40f863d0c6b6c790b6db5e26c13d)
+        ;
+
+        
+    
+    
+                marker_cd8433fb50f91a9c68416b37a9316349.setIcon(icon_9a45cad56139aaef86bb29362d748035);
+            
+    
+            var marker_7e8fc49a8230ea827e2f158d2a6946fe = L.marker(
+                [35.179, -80.8842],
+                {
+}
+            ).addTo(marker_cluster_1ba87722948cb5022f8054cc2f7acf5b);
+        
+    
+            var icon_6046eb4a42b5dd9b21a21ee66c3c8756 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_574b747a9d96dd86a6df8d09e2e66643 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8d560a920048978c50fe4ca74f598e5 = $(`<div id="html_b8d560a920048978c50fe4ca74f598e5" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 14px;">         <b>🏫 Type:</b> Library<br>         <b>📍 Name:</b> Proposed Library - South Blvd<br>         <b>📬 ZIP:</b> 28217<br>         <b>⭐ Rating:</b> nan<br>         <b>🎓 Grad %:</b> nan<br>         <b>🚶 Proximity:</b> High Need Area<br>         <b>💬 Comment:</b> No public reading access in walking distance<br>         <b>📊 PIST Score:</b> 4     </div>     </div>`)[0];
+                popup_574b747a9d96dd86a6df8d09e2e66643.setContent(html_b8d560a920048978c50fe4ca74f598e5);
+            
+        
+
+        marker_7e8fc49a8230ea827e2f158d2a6946fe.bindPopup(popup_574b747a9d96dd86a6df8d09e2e66643)
+        ;
+
+        
+    
+    
+                marker_7e8fc49a8230ea827e2f158d2a6946fe.setIcon(icon_6046eb4a42b5dd9b21a21ee66c3c8756);
+            
+    
+            marker_cluster_1ba87722948cb5022f8054cc2f7acf5b.addTo(map_88a814e220077e60268bfcbb1333b8e1);
+        
+    
+            tile_layer_e89b692fec0051c4f4dc4fd982ce40fd.addTo(map_88a814e220077e60268bfcbb1333b8e1);
+        
+    
+                marker_809d47c8b4eefefbc5ec3280b35272ff.setIcon(icon_878aff9d7afec7acb950551243c4bd1e);
+            
+    
+                marker_5e82d611d2030c3fefd1da1afb8df1a7.setIcon(icon_67a45fe5a54cb1aea52ebf8e8f7c5ce2);
+            
+    
+                marker_a96274194ffc6856ce25f56d8b94de4a.setIcon(icon_2add03e3845d073215be439eb25953ba);
+            
+    
+                marker_5b27c6835a9227835ec45d7f086e656f.setIcon(icon_4b115261625a461c1002b95f7b81023b);
+            
+    
+                marker_3bb0c278f751acbc7531bd17ee0b3dfb.setIcon(icon_ad869642cd9c14bd2ba63f171833def8);
+            
+    
+                marker_d75cb7b07b6db42a61e1a30e46553a3b.setIcon(icon_0d5ceda66369385f409bd7115689f23c);
+            
+    
+                marker_1811d16539eb4f76f332aa48dec9bb5b.setIcon(icon_58d2985c3a0d09a11144751c414f4cbb);
+            
+    
+                marker_c89f1d40388cfbf7a0bff27e13d913ca.setIcon(icon_811d7d247dec3c6330e208aa443be839);
+            
+    
+                marker_ff33d715b3e8127c22b3caf80756ac8d.setIcon(icon_33127dfe065a389029467ff7938306ef);
+            
+    
+                marker_e7995c62f69daa42dcf5c831c333c837.setIcon(icon_f2666e9f55b1ee27716622affb88b06d);
+            
+    
+                marker_f403886f8c19d1c150411e18caea3331.setIcon(icon_6b46e95520c1bdb8675f5d692894c49c);
+            
+    
+                marker_83fef60465e4dbdca82a19f44ec3d0ab.setIcon(icon_9a40fdc34c52b1a6865dfeb296f8bba0);
+            
+    
+                marker_a9b8e4c195b85c7834a3f20ea47afed5.setIcon(icon_3cb9aaf11f1dffc4387cbdd07c6b8b71);
+            
+    
+                marker_8b5e9341d837b4a321a13f9a434b96b4.setIcon(icon_323ed98dd81a786e37ad6cd1d5195930);
+            
+    
+                marker_3bc0fce5d10bc61ad9c59b2ed5e0cde7.setIcon(icon_cb77440259c8286135698bc402403c80);
+            
+    
+                marker_30ce5e245ab4127786ea7560c2755ede.setIcon(icon_fb893b66a88e98237a78f16325d2754a);
+            
+    
+                marker_394aec2ac7cc31e5f57317cc92727b24.setIcon(icon_03265cb7eb1ccc3655a53d0b9475542f);
+            
+    
+                marker_725cac4597ef30ca3e5784242a0b6fed.setIcon(icon_319873d39637cb3e1f04d1064a475018);
+            
+    
+                marker_1f85b631adea944fd1ee334b38280de1.setIcon(icon_ce69799f88b5a110d63fbd252d9b2003);
+            
+    
+                marker_33756681aa935920f4cfb55f2f8f0263.setIcon(icon_c59242474e0c61584a0a6d73d09f9ca0);
+            
+    
+                marker_02e2d6e9a61d8712e24116adc8edaf2a.setIcon(icon_be3f24cf94bc341f445a3875567fd858);
+            
+    
+                marker_d1fd5fe6b32dcb28a629ff4bbbd76c0a.setIcon(icon_4dabd4d50a93cdc4f1cb6494a870f897);
+            
+    
+                marker_bb95d3b54d1041b5c27b92908383e120.setIcon(icon_1521ab7f7bc439998beb8a5c2d721e70);
+            
+    
+                marker_3bd0b11ef404683951c75dce7fcf684d.setIcon(icon_d291b1ef49ce2745b2761529ffddb698);
+            
+    
+                marker_cd8433fb50f91a9c68416b37a9316349.setIcon(icon_9a45cad56139aaef86bb29362d748035);
+            
+    
+                marker_7e8fc49a8230ea827e2f158d2a6946fe.setIcon(icon_6046eb4a42b5dd9b21a21ee66c3c8756);
+            
+    
+            marker_cluster_1ba87722948cb5022f8054cc2f7acf5b.addTo(map_88a814e220077e60268bfcbb1333b8e1);
+        
+</script>
+</html>

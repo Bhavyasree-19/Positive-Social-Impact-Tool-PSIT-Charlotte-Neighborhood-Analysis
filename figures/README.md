@@ -1,20 +1,17 @@
-# Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis
-This project aims to map, measure, and visualize the Positive Social Impact Tool (PSIT) indicators across different ZIP codes in Charlotte. By integrating demographic, environmental, land use, and accessibility data, we highlight areas of need and opportunity.
+# Figures and Live Maps
 
-## Figures and Live Maps
-
-### Charts (PNG)
+## Charts (PNG)
 - Demographics: Race and Ethnicity  
-![Demographics Race and Ethnicity](figures/demographics_Race_and_Ethnicity.png)
+![Demographics Race and Ethnicity](demographics_Race_and_Ethnicity.png)
 - Demographics: Age  
-![Demographics Age](figures/demographics_Age.png)
+![Demographics Age](demographics_Age.png)
 - Demographics: Veteran Status  
-![Demographics Veteran Status](figures/demographics_Veteran_Status.png)
+![Demographics Veteran Status](demographics_Veteran_Status.png)
 - Place Making  
-![Place Making](figures/place_making.png)
+![Place Making](place_making.png)
 
-### Live Maps (GitHub Pages)
-After enabling GitHub Pages for this repo, use these links:
+## Live Maps (GitHub Pages)
+After enabling GitHub Pages for the repo, use these links:
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/parks_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/recreation_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/transportation_map.html
@@ -23,13 +20,3 @@ After enabling GitHub Pages for this repo, use these links:
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/healthcare_psit_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/finance_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/land_map.html
-
-### How to Enable GitHub Pages
-1. Go to the repo on GitHub.
-2. Open `Settings` → `Pages`.
-3. Set `Source` to `Deploy from a branch`.
-4. Select `main` and `/(root)`, then save.
-5. Wait 1–2 minutes and refresh the live map links above.
-
-### Important
-Make sure the `figures/` folder is committed and pushed to GitHub, or the live links will 404.

@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fcb7163a2024c90ee26474eab32e71c5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fcb7163a2024c90ee26474eab32e71c5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fcb7163a2024c90ee26474eab32e71c5 = L.map(
+                "map_fcb7163a2024c90ee26474eab32e71c5",
+                {
+                    center: [35.2271, -80.8431],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_67eacffe9350cdc2bf06f8699e6440e4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_67eacffe9350cdc2bf06f8699e6440e4.addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var marker_10642156241518f2dcc4cbdfd35b19a2 = L.marker(
+                [35.2271, -80.8431],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_388df7055f2edad9e79d1ef471558a1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd667d1acb8c475f9d25154a0071e1a4 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_c0505518c20f5761aaf614afbf7ba765 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgyMDI8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODIwMjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA1LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDYuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinIUgWWVzPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA5MC4wMAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_bd667d1acb8c475f9d25154a0071e1a4.setContent(i_frame_c0505518c20f5761aaf614afbf7ba765);
+            
+        
+
+        marker_10642156241518f2dcc4cbdfd35b19a2.bindPopup(popup_bd667d1acb8c475f9d25154a0071e1a4)
+        ;
+
+        
+    
+    
+            marker_10642156241518f2dcc4cbdfd35b19a2.bindTooltip(
+                `<div>
+                     Healthcare Zone 28202
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10642156241518f2dcc4cbdfd35b19a2.setIcon(icon_388df7055f2edad9e79d1ef471558a1b);
+            
+    
+            var marker_d040f95c0dbeab23eb4551d2db854a08 = L.marker(
+                [35.2154, -80.8601],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_cd5a0d4f8c0453cf915a57597586136a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74fb5adaae6b88d02ccce0ecee36a56c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_0399fda0ceea970dd82f7f755caf7c6b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgyMDM8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODIwMzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNzA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinIUgWWVzPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA3MS4xNwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_74fb5adaae6b88d02ccce0ecee36a56c.setContent(i_frame_0399fda0ceea970dd82f7f755caf7c6b);
+            
+        
+
+        marker_d040f95c0dbeab23eb4551d2db854a08.bindPopup(popup_74fb5adaae6b88d02ccce0ecee36a56c)
+        ;
+
+        
+    
+    
+            marker_d040f95c0dbeab23eb4551d2db854a08.bindTooltip(
+                `<div>
+                     Healthcare Zone 28203
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d040f95c0dbeab23eb4551d2db854a08.setIcon(icon_cd5a0d4f8c0453cf915a57597586136a);
+            
+    
+            var marker_e2eae0ee8ce25197095427cdb0d4efe3 = L.marker(
+                [35.214, -80.8331],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_1b5db954a2408cc14d379904b18127fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c1dea78c0024e6445c6d2a70c3bfd04 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_fc0e639a0a5b8828fa0d273598a6843a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgyMDQ8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODIwNDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxODA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA0Ny4zMwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_4c1dea78c0024e6445c6d2a70c3bfd04.setContent(i_frame_fc0e639a0a5b8828fa0d273598a6843a);
+            
+        
+
+        marker_e2eae0ee8ce25197095427cdb0d4efe3.bindPopup(popup_4c1dea78c0024e6445c6d2a70c3bfd04)
+        ;
+
+        
+    
+    
+            marker_e2eae0ee8ce25197095427cdb0d4efe3.bindTooltip(
+                `<div>
+                     Healthcare Zone 28204
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e2eae0ee8ce25197095427cdb0d4efe3.setIcon(icon_1b5db954a2408cc14d379904b18127fd);
+            
+    
+            var marker_7c0f66dab911d5590e0a8d1e72d52b62 = L.marker(
+                [35.2204, -80.7736],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_bbd4636ac1a42c9510ea1e273cc56ed2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6cee4aaf35e85820b8c5d31a9ae50a4 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_d01e9937023f16de876125f7d0451b23 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgyMDU8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODIwNTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxOTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNS41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA2LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAyOC41MAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_b6cee4aaf35e85820b8c5d31a9ae50a4.setContent(i_frame_d01e9937023f16de876125f7d0451b23);
+            
+        
+
+        marker_7c0f66dab911d5590e0a8d1e72d52b62.bindPopup(popup_b6cee4aaf35e85820b8c5d31a9ae50a4)
+        ;
+
+        
+    
+    
+            marker_7c0f66dab911d5590e0a8d1e72d52b62.bindTooltip(
+                `<div>
+                     Healthcare Zone 28205
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c0f66dab911d5590e0a8d1e72d52b62.setIcon(icon_bbd4636ac1a42c9510ea1e273cc56ed2);
+            
+    
+            var marker_7c84e284641024bbe9d4ac2f6e038a7e = L.marker(
+                [35.2571, -80.819],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_b5920a35a0a5aaa3cefdf3a4b51263cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3a5a48bc8f1ec642af6ecb3250388fe = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_ca2183b1a77cf92b345b063d9e8b9e37 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgyMDY8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODIwNjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMDA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDQzLjAwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_d3a5a48bc8f1ec642af6ecb3250388fe.setContent(i_frame_ca2183b1a77cf92b345b063d9e8b9e37);
+            
+        
+
+        marker_7c84e284641024bbe9d4ac2f6e038a7e.bindPopup(popup_d3a5a48bc8f1ec642af6ecb3250388fe)
+        ;
+
+        
+    
+    
+            marker_7c84e284641024bbe9d4ac2f6e038a7e.bindTooltip(
+                `<div>
+                     Healthcare Zone 28206
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c84e284641024bbe9d4ac2f6e038a7e.setIcon(icon_b5920a35a0a5aaa3cefdf3a4b51263cb);
+            
+    
+            var marker_526346c8fad9cfa4c15ff43b64519388 = L.marker(
+                [35.4093, -80.581],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_64dd2b6157ea0d090bea54ce385c0c9b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af13ff3995dd943607543cc0e19a42e3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_63ded3400e26b701db34d4577a3b61c8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMjU8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAyNTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinIUgWWVzPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA2Ni42NwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_af13ff3995dd943607543cc0e19a42e3.setContent(i_frame_63ded3400e26b701db34d4577a3b61c8);
+            
+        
+
+        marker_526346c8fad9cfa4c15ff43b64519388.bindPopup(popup_af13ff3995dd943607543cc0e19a42e3)
+        ;
+
+        
+    
+    
+            marker_526346c8fad9cfa4c15ff43b64519388.bindTooltip(
+                `<div>
+                     Healthcare Zone 28025
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_526346c8fad9cfa4c15ff43b64519388.setIcon(icon_64dd2b6157ea0d090bea54ce385c0c9b);
+            
+    
+            var marker_6dbcfa12e92cfaaf4a57a70bd75dd8eb = L.marker(
+                [35.3982, -80.688],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_d982486ba186aeccfba8fb51064a3091 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_881ff14c2b5286eeaa91084a2daed0c8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_52cf48337d2d40dfbc2cec235f1b0da5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMjc8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAyNzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNS41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA2LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4pyFIFllczxicj4KICAgIDxiPjxzcGFuIHN0eWxlPSdjb2xvcjpibHVlOyc+Q29tcG9zaXRlIFBTSVQgU2NvcmU6PC9zcGFuPjwvYj4gNjUuODMKICAgIA==" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_881ff14c2b5286eeaa91084a2daed0c8.setContent(i_frame_52cf48337d2d40dfbc2cec235f1b0da5);
+            
+        
+
+        marker_6dbcfa12e92cfaaf4a57a70bd75dd8eb.bindPopup(popup_881ff14c2b5286eeaa91084a2daed0c8)
+        ;
+
+        
+    
+    
+            marker_6dbcfa12e92cfaaf4a57a70bd75dd8eb.bindTooltip(
+                `<div>
+                     Healthcare Zone 28027
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6dbcfa12e92cfaaf4a57a70bd75dd8eb.setIcon(icon_d982486ba186aeccfba8fb51064a3091);
+            
+    
+            var marker_73783534aa0b52f61785d6d260911b5a = L.marker(
+                [35.403, -80.6318],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_fb7edaaa2db3062d2f7d693e0270466d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1c277b800f2531c685ec8206d04b5ae = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_2a8621406888ddc54f05ffdafbeebcb8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwNzU8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODA3NTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNzA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi4wJTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjA8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4pyFIFllczxicj4KICAgIDxiPjxzcGFuIHN0eWxlPSdjb2xvcjpibHVlOyc+Q29tcG9zaXRlIFBTSVQgU2NvcmU6PC9zcGFuPjwvYj4gNDcuMDAKICAgIA==" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_a1c277b800f2531c685ec8206d04b5ae.setContent(i_frame_2a8621406888ddc54f05ffdafbeebcb8);
+            
+        
+
+        marker_73783534aa0b52f61785d6d260911b5a.bindPopup(popup_a1c277b800f2531c685ec8206d04b5ae)
+        ;
+
+        
+    
+    
+            marker_73783534aa0b52f61785d6d260911b5a.bindTooltip(
+                `<div>
+                     Healthcare Zone 28075
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_73783534aa0b52f61785d6d260911b5a.setIcon(icon_fb7edaaa2db3062d2f7d693e0270466d);
+            
+    
+            var marker_26ede60d16b455a47b845e29f364f949 = L.marker(
+                [35.5016, -80.6395],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_38210a576a5fe3752e71d7352100597f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_636178e027c379915508bdfe3fa472e6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_3d46909489eae5abce132789fb4ec6b8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwODE8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODA4MTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxODA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDU2LjUwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_636178e027c379915508bdfe3fa472e6.setContent(i_frame_3d46909489eae5abce132789fb4ec6b8);
+            
+        
+
+        marker_26ede60d16b455a47b845e29f364f949.bindPopup(popup_636178e027c379915508bdfe3fa472e6)
+        ;
+
+        
+    
+    
+            marker_26ede60d16b455a47b845e29f364f949.bindTooltip(
+                `<div>
+                     Healthcare Zone 28081
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_26ede60d16b455a47b845e29f364f949.setIcon(icon_38210a576a5fe3752e71d7352100597f);
+            
+    
+            var marker_b07ec7b7dec561fa5c56e963360da8a4 = L.marker(
+                [35.485, -80.6082],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_e1e0f1e37611746354b34ac53bd59bbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_868683fa9c77943d72758a3c7109cf6a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_2a91e2c8cc96c7b19d1cdc1f6ef5a462 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwODM8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODA4Mzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxOTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA1LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDYuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDM3LjY3CiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_868683fa9c77943d72758a3c7109cf6a.setContent(i_frame_2a91e2c8cc96c7b19d1cdc1f6ef5a462);
+            
+        
+
+        marker_b07ec7b7dec561fa5c56e963360da8a4.bindPopup(popup_868683fa9c77943d72758a3c7109cf6a)
+        ;
+
+        
+    
+    
+            marker_b07ec7b7dec561fa5c56e963360da8a4.bindTooltip(
+                `<div>
+                     Healthcare Zone 28083
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b07ec7b7dec561fa5c56e963360da8a4.setIcon(icon_e1e0f1e37611746354b34ac53bd59bbb);
+            
+    
+            var marker_de35f8f8d93467f71c8d787d8a60c614 = L.marker(
+                [35.24, -81.0429],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_5e7331d2577a9ce88f6bec326c2390de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a908164e8b514cd5368267e9eb3e8ed = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_bd708a35829b8998dd8f40575a1719e1 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMTI8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAxMjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMDA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi4wJTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjA8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4pyFIFllczxicj4KICAgIDxiPjxzcGFuIHN0eWxlPSdjb2xvcjpibHVlOyc+Q29tcG9zaXRlIFBTSVQgU2NvcmU6PC9zcGFuPjwvYj4gNjEuMzMKICAgIA==" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_8a908164e8b514cd5368267e9eb3e8ed.setContent(i_frame_bd708a35829b8998dd8f40575a1719e1);
+            
+        
+
+        marker_de35f8f8d93467f71c8d787d8a60c614.bindPopup(popup_8a908164e8b514cd5368267e9eb3e8ed)
+        ;
+
+        
+    
+    
+            marker_de35f8f8d93467f71c8d787d8a60c614.bindTooltip(
+                `<div>
+                     Healthcare Zone 28012
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de35f8f8d93467f71c8d787d8a60c614.setIcon(icon_5e7331d2577a9ce88f6bec326c2390de);
+            
+    
+            var marker_4c09d15c2a29ad178d80a4030651a0ef = L.marker(
+                [35.2522, -81.5623],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_ccf9252af49557ea40fa8ab7fa62fa21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6271488ff20b0213d260991cb0aea88 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_00b47b711682942fde81015f1b45d4bd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMTY8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAxNjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAzNy41MAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_c6271488ff20b0213d260991cb0aea88.setContent(i_frame_00b47b711682942fde81015f1b45d4bd);
+            
+        
+
+        marker_4c09d15c2a29ad178d80a4030651a0ef.bindPopup(popup_c6271488ff20b0213d260991cb0aea88)
+        ;
+
+        
+    
+    
+            marker_4c09d15c2a29ad178d80a4030651a0ef.bindTooltip(
+                `<div>
+                     Healthcare Zone 28016
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c09d15c2a29ad178d80a4030651a0ef.setIcon(icon_ccf9252af49557ea40fa8ab7fa62fa21);
+            
+    
+            var marker_51a8196e5f53c54625c7d26f8d5749e3 = L.marker(
+                [35.3196, -81.5356],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_e3523beb5b0a6c9b7a6e914bded67aa5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9c2f294a88b4f7e57fe65f22325d19a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_136855ddc5b085cf716bfa51c2729217 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMjE8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAyMTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA1LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDYuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDcwLjAwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_f9c2f294a88b4f7e57fe65f22325d19a.setContent(i_frame_136855ddc5b085cf716bfa51c2729217);
+            
+        
+
+        marker_51a8196e5f53c54625c7d26f8d5749e3.bindPopup(popup_f9c2f294a88b4f7e57fe65f22325d19a)
+        ;
+
+        
+    
+    
+            marker_51a8196e5f53c54625c7d26f8d5749e3.bindTooltip(
+                `<div>
+                     Healthcare Zone 28021
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51a8196e5f53c54625c7d26f8d5749e3.setIcon(icon_e3523beb5b0a6c9b7a6e914bded67aa5);
+            
+    
+            var marker_bdb90d575b0fafa83d34369814d79b99 = L.marker(
+                [35.3642, -81.2187],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_80f0d52b09582783c8ffbc44d68c165e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8fc3147e069757eeedbe4117cd03a07 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_73691e03633e6c7a0aab5ff232b11720 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMzQ8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAzNDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNzA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDUxLjE3CiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_d8fc3147e069757eeedbe4117cd03a07.setContent(i_frame_73691e03633e6c7a0aab5ff232b11720);
+            
+        
+
+        marker_bdb90d575b0fafa83d34369814d79b99.bindPopup(popup_d8fc3147e069757eeedbe4117cd03a07)
+        ;
+
+        
+    
+    
+            marker_bdb90d575b0fafa83d34369814d79b99.bindTooltip(
+                `<div>
+                     Healthcare Zone 28034
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bdb90d575b0fafa83d34369814d79b99.setIcon(icon_80f0d52b09582783c8ffbc44d68c165e);
+            
+    
+            var marker_1cffd0a93f323e144825dae50ce15580 = L.marker(
+                [35.2632, -81.1873],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_06f6da18e4b959a61e29808d3fd6a1a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3bec2e5bd8128bb21282a2f7d5162688 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_4a43c807a14d7c535dad5299ef5eb75b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwNTI8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODA1Mjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxODA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAzMi4zMwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_3bec2e5bd8128bb21282a2f7d5162688.setContent(i_frame_4a43c807a14d7c535dad5299ef5eb75b);
+            
+        
+
+        marker_1cffd0a93f323e144825dae50ce15580.bindPopup(popup_3bec2e5bd8128bb21282a2f7d5162688)
+        ;
+
+        
+    
+    
+            marker_1cffd0a93f323e144825dae50ce15580.bindTooltip(
+                `<div>
+                     Healthcare Zone 28052
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1cffd0a93f323e144825dae50ce15580.setIcon(icon_06f6da18e4b959a61e29808d3fd6a1a8);
+            
+    
+            var marker_368e6820c2ff2d68f6c62254090b53dd = L.marker(
+                [35.5849, -80.8099],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_65e245027592fb2a3aa95074390a9b67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f2bec97c94ed71783104f3dbafdcea4 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_37189ea4c87115d56b5160bd7b01eeb8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMTU8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODExNTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxOTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNS41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA2LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4pyFIFllczxicj4KICAgIDxiPjxzcGFuIHN0eWxlPSdjb2xvcjpibHVlOyc+Q29tcG9zaXRlIFBTSVQgU2NvcmU6PC9zcGFuPjwvYj4gNTYuMDAKICAgIA==" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_6f2bec97c94ed71783104f3dbafdcea4.setContent(i_frame_37189ea4c87115d56b5160bd7b01eeb8);
+            
+        
+
+        marker_368e6820c2ff2d68f6c62254090b53dd.bindPopup(popup_6f2bec97c94ed71783104f3dbafdcea4)
+        ;
+
+        
+    
+    
+            marker_368e6820c2ff2d68f6c62254090b53dd.bindTooltip(
+                `<div>
+                     Healthcare Zone 28115
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_368e6820c2ff2d68f6c62254090b53dd.setIcon(icon_65e245027592fb2a3aa95074390a9b67);
+            
+    
+            var marker_882a71a52ffebdde527332c4542d6ecc = L.marker(
+                [35.6025, -80.897],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_242b5052ff9755dafc182733e15ca2f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a309ea119763ac47903107cc5806d10 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_dd2e21d31088665f8885e97485fcb8ca = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMTc8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODExNzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMDA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDY1LjUwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_0a309ea119763ac47903107cc5806d10.setContent(i_frame_dd2e21d31088665f8885e97485fcb8ca);
+            
+        
+
+        marker_882a71a52ffebdde527332c4542d6ecc.bindPopup(popup_0a309ea119763ac47903107cc5806d10)
+        ;
+
+        
+    
+    
+            marker_882a71a52ffebdde527332c4542d6ecc.bindTooltip(
+                `<div>
+                     Healthcare Zone 28117
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_882a71a52ffebdde527332c4542d6ecc.setIcon(icon_242b5052ff9755dafc182733e15ca2f8);
+            
+    
+            var marker_0b4941038ba3289eb5f6cc678cf83931 = L.marker(
+                [35.7054, -80.8973],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_e829ec30f604636118eadd139c336a1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0115a3675829a73d4d8e6cf6b9736f20 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_8ea5c0fb9a25ea66fe140ff7968d037c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxNjY8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODE2Njxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDQ2LjY3CiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_0115a3675829a73d4d8e6cf6b9736f20.setContent(i_frame_8ea5c0fb9a25ea66fe140ff7968d037c);
+            
+        
+
+        marker_0b4941038ba3289eb5f6cc678cf83931.bindPopup(popup_0115a3675829a73d4d8e6cf6b9736f20)
+        ;
+
+        
+    
+    
+            marker_0b4941038ba3289eb5f6cc678cf83931.bindTooltip(
+                `<div>
+                     Healthcare Zone 28166
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b4941038ba3289eb5f6cc678cf83931.setIcon(icon_e829ec30f604636118eadd139c336a1d);
+            
+    
+            var marker_aa77da8f989f797b5b2d9ce09cb51460 = L.marker(
+                [35.7826, -80.8873],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_4e38b33972b44500bfa697f3d8143807 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60fe105167ceb6fced736e53fc4f374b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_a466aac898085de9e94a710e465e897b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjg2MjU8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODYyNTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNS41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA2LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA0NS44MwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_60fe105167ceb6fced736e53fc4f374b.setContent(i_frame_a466aac898085de9e94a710e465e897b);
+            
+        
+
+        marker_aa77da8f989f797b5b2d9ce09cb51460.bindPopup(popup_60fe105167ceb6fced736e53fc4f374b)
+        ;
+
+        
+    
+    
+            marker_aa77da8f989f797b5b2d9ce09cb51460.bindTooltip(
+                `<div>
+                     Healthcare Zone 28625
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa77da8f989f797b5b2d9ce09cb51460.setIcon(icon_4e38b33972b44500bfa697f3d8143807);
+            
+    
+            var marker_59f37a0732e651da7d787079e9c82444 = L.marker(
+                [35.774, -80.8922],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_07d142f0e20ce68838e7e073227583ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8307dde99d46e723b0977f95c3fd98ff = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_5602ca04c62430f78cd11e74b6c185f6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjg2Nzc8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODY3Nzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNzA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi4wJTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjA8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAyNy4wMAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_8307dde99d46e723b0977f95c3fd98ff.setContent(i_frame_5602ca04c62430f78cd11e74b6c185f6);
+            
+        
+
+        marker_59f37a0732e651da7d787079e9c82444.bindPopup(popup_8307dde99d46e723b0977f95c3fd98ff)
+        ;
+
+        
+    
+    
+            marker_59f37a0732e651da7d787079e9c82444.bindTooltip(
+                `<div>
+                     Healthcare Zone 28677
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59f37a0732e651da7d787079e9c82444.setIcon(icon_07d142f0e20ce68838e7e073227583ed);
+            
+    
+            var marker_741449df9be8388ba339bbdc20fe74b7 = L.marker(
+                [35.485, -81.2753],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_f5b88def77ce7f004f7ed5f51d667661 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e32b67602cff7b16b2dd9d7c0102012 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_fdb6d746ebdc17600d899ae99fe09aa9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwMzM8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODAzMzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxODA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDc5LjAwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_3e32b67602cff7b16b2dd9d7c0102012.setContent(i_frame_fdb6d746ebdc17600d899ae99fe09aa9);
+            
+        
+
+        marker_741449df9be8388ba339bbdc20fe74b7.bindPopup(popup_3e32b67602cff7b16b2dd9d7c0102012)
+        ;
+
+        
+    
+    
+            marker_741449df9be8388ba339bbdc20fe74b7.bindTooltip(
+                `<div>
+                     Healthcare Zone 28033
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_741449df9be8388ba339bbdc20fe74b7.setIcon(icon_f5b88def77ce7f004f7ed5f51d667661);
+            
+    
+            var marker_aab2e90be632b5f78c57442cfaecf529 = L.marker(
+                [35.472, -81.2545],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_ce6c8d55078ea15c3813270b7aab885e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_804f0bcfb84434b391c7c3169c0d02ac = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_4dac2ec66a521492cf782068f612e6a0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwOTI8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODA5Mjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxOTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA1LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDYuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDYwLjE3CiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_804f0bcfb84434b391c7c3169c0d02ac.setContent(i_frame_4dac2ec66a521492cf782068f612e6a0);
+            
+        
+
+        marker_aab2e90be632b5f78c57442cfaecf529.bindPopup(popup_804f0bcfb84434b391c7c3169c0d02ac)
+        ;
+
+        
+    
+    
+            marker_aab2e90be632b5f78c57442cfaecf529.bindTooltip(
+                `<div>
+                     Healthcare Zone 28092
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aab2e90be632b5f78c57442cfaecf529.setIcon(icon_ce6c8d55078ea15c3813270b7aab885e);
+            
+    
+            var marker_73a07f77291f32b1ffbe4a54822f08a9 = L.marker(
+                [35.4732, -81.4344],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_f974851233d7cc8edd307a6867aa2c46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c128574de3149e7078ead3bed8460b5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_a66a627a21d62e62257dab02e3d8adee = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxNjg8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODE2ODxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMDA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi4wJTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjA8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA0MS4zMwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_0c128574de3149e7078ead3bed8460b5.setContent(i_frame_a66a627a21d62e62257dab02e3d8adee);
+            
+        
+
+        marker_73a07f77291f32b1ffbe4a54822f08a9.bindPopup(popup_0c128574de3149e7078ead3bed8460b5)
+        ;
+
+        
+    
+    
+            marker_73a07f77291f32b1ffbe4a54822f08a9.bindTooltip(
+                `<div>
+                     Healthcare Zone 28168
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_73a07f77291f32b1ffbe4a54822f08a9.setIcon(icon_f974851233d7cc8edd307a6867aa2c46);
+            
+    
+            var marker_f6c0a03ef5a105b50277a598d804bcd4 = L.marker(
+                [35.4712, -81.2544],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_488012e8e92433c560dcd51f3475de98 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b5f4e7839ddbe2aefd1008bba69aef4 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_0ed013507e927affad01f687dea3ea47 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMjM8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODEyMzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAyMi41MAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_0b5f4e7839ddbe2aefd1008bba69aef4.setContent(i_frame_0ed013507e927affad01f687dea3ea47);
+            
+        
+
+        marker_f6c0a03ef5a105b50277a598d804bcd4.bindPopup(popup_0b5f4e7839ddbe2aefd1008bba69aef4)
+        ;
+
+        
+    
+    
+            marker_f6c0a03ef5a105b50277a598d804bcd4.bindTooltip(
+                `<div>
+                     Healthcare Zone 28123
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6c0a03ef5a105b50277a598d804bcd4.setIcon(icon_488012e8e92433c560dcd51f3475de98);
+            
+    
+            var marker_dd245b35414436eed2b3991429bb1bc2 = L.marker(
+                [35.3712, -81.0389],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_f8275fc563a9c99375f85984eabb8723 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_946bb79b80eecdbef0eff08623756e88 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_0addf7e9266f0d71419a6d2c905598bb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxNjQ8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODE2NDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA1LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDYuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDU1LjAwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_946bb79b80eecdbef0eff08623756e88.setContent(i_frame_0addf7e9266f0d71419a6d2c905598bb);
+            
+        
+
+        marker_dd245b35414436eed2b3991429bb1bc2.bindPopup(popup_946bb79b80eecdbef0eff08623756e88)
+        ;
+
+        
+    
+    
+            marker_dd245b35414436eed2b3991429bb1bc2.bindTooltip(
+                `<div>
+                     Healthcare Zone 28164
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd245b35414436eed2b3991429bb1bc2.setIcon(icon_f8275fc563a9c99375f85984eabb8723);
+            
+    
+            var marker_cb3bbb6b6cac0f024d11d1a311706928 = L.marker(
+                [35.0785, -80.6446],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_b8445d741f6130d1df8e2009923fcf18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1a577507eec14867adab761242b1ed6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_bd672b46cd5bf991d1c628f55d4cce1b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgwNzk8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODA3OTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNzA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDczLjY3CiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_d1a577507eec14867adab761242b1ed6.setContent(i_frame_bd672b46cd5bf991d1c628f55d4cce1b);
+            
+        
+
+        marker_cb3bbb6b6cac0f024d11d1a311706928.bindPopup(popup_d1a577507eec14867adab761242b1ed6)
+        ;
+
+        
+    
+    
+            marker_cb3bbb6b6cac0f024d11d1a311706928.bindTooltip(
+                `<div>
+                     Healthcare Zone 28079
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb3bbb6b6cac0f024d11d1a311706928.setIcon(icon_b8445d741f6130d1df8e2009923fcf18);
+            
+    
+            var marker_ccf930a7d0f584c6ed84382db0685b94 = L.marker(
+                [34.965, -80.5492],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_5214bd9d523e6378ded1cd47dff02f4e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3de5b308c9fa882696de7e7c163da3f9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_5fc7f32d4002c68092dc2d61811d8342 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMDM8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODEwMzxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxODA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4pyFIFllczxicj4KICAgIDxiPjxzcGFuIHN0eWxlPSdjb2xvcjpibHVlOyc+Q29tcG9zaXRlIFBTSVQgU2NvcmU6PC9zcGFuPjwvYj4gNTkuODMKICAgIA==" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_3de5b308c9fa882696de7e7c163da3f9.setContent(i_frame_5fc7f32d4002c68092dc2d61811d8342);
+            
+        
+
+        marker_ccf930a7d0f584c6ed84382db0685b94.bindPopup(popup_3de5b308c9fa882696de7e7c163da3f9)
+        ;
+
+        
+    
+    
+            marker_ccf930a7d0f584c6ed84382db0685b94.bindTooltip(
+                `<div>
+                     Healthcare Zone 28103
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccf930a7d0f584c6ed84382db0685b94.setIcon(icon_5214bd9d523e6378ded1cd47dff02f4e);
+            
+    
+            var marker_9bbe08fb53c0829a1c13784af1610f5a = L.marker(
+                [35.0381, -80.76],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_13f8910ab58ad2b3ffb2d4a326a7817a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b82b874ef9615cb122e2df022cd14cc5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_962592cba7c19b81dfc510395a327f13 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMDQ8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODEwNDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxOTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNS41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA2LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAzNi4wMAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_b82b874ef9615cb122e2df022cd14cc5.setContent(i_frame_962592cba7c19b81dfc510395a327f13);
+            
+        
+
+        marker_9bbe08fb53c0829a1c13784af1610f5a.bindPopup(popup_b82b874ef9615cb122e2df022cd14cc5)
+        ;
+
+        
+    
+    
+            marker_9bbe08fb53c0829a1c13784af1610f5a.bindTooltip(
+                `<div>
+                     Healthcare Zone 28104
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bbe08fb53c0829a1c13784af1610f5a.setIcon(icon_13f8910ab58ad2b3ffb2d4a326a7817a);
+            
+    
+            var marker_9550a65d85d161e62e8acf8bf5a09e8b = L.marker(
+                [34.9804, -80.5491],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_5e36ddbbd599bb99eb147fb22fb7c34a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74df15bd15e8ffd096f9a98fe4e506fd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_985aef49b377627cfae2ae9d26ceb89b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMTA8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODExMDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMDA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDUwLjUwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_74df15bd15e8ffd096f9a98fe4e506fd.setContent(i_frame_985aef49b377627cfae2ae9d26ceb89b);
+            
+        
+
+        marker_9550a65d85d161e62e8acf8bf5a09e8b.bindPopup(popup_74df15bd15e8ffd096f9a98fe4e506fd)
+        ;
+
+        
+    
+    
+            marker_9550a65d85d161e62e8acf8bf5a09e8b.bindTooltip(
+                `<div>
+                     Healthcare Zone 28110
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9550a65d85d161e62e8acf8bf5a09e8b.setIcon(icon_5e36ddbbd599bb99eb147fb22fb7c34a);
+            
+    
+            var marker_30c5bdd8560852e6f837f6a5982e47b9 = L.marker(
+                [34.895, -80.7393],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_acdc3de1561468abf4abadf527fa648e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4010e37edafa165b59a97106b6b41411 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_e03c3237fc39d63386960bca0d192e5e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjgxMTI8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyODExMjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDMxLjY3CiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_4010e37edafa165b59a97106b6b41411.setContent(i_frame_e03c3237fc39d63386960bca0d192e5e);
+            
+        
+
+        marker_30c5bdd8560852e6f837f6a5982e47b9.bindPopup(popup_4010e37edafa165b59a97106b6b41411)
+        ;
+
+        
+    
+    
+            marker_30c5bdd8560852e6f837f6a5982e47b9.bindTooltip(
+                `<div>
+                     Healthcare Zone 28112
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30c5bdd8560852e6f837f6a5982e47b9.setIcon(icon_acdc3de1561468abf4abadf527fa648e);
+            
+    
+            var marker_034d4bb72e6e8c38b8f68013237ba653 = L.marker(
+                [35.0513, -80.9966],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_1aa36c487d42cd8e087ff66e564af25d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec0cd80bc96e08e6d2c139bd1487f6e1 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_06596c5b25865bd61761e1310d9e5b49 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjk3MDg8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyOTcwODxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDU8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNS41JTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA2LjU8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA2OC4zMwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_ec0cd80bc96e08e6d2c139bd1487f6e1.setContent(i_frame_06596c5b25865bd61761e1310d9e5b49);
+            
+        
+
+        marker_034d4bb72e6e8c38b8f68013237ba653.bindPopup(popup_ec0cd80bc96e08e6d2c139bd1487f6e1)
+        ;
+
+        
+    
+    
+            marker_034d4bb72e6e8c38b8f68013237ba653.bindTooltip(
+                `<div>
+                     Healthcare Zone 29708
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_034d4bb72e6e8c38b8f68013237ba653.setIcon(icon_1aa36c487d42cd8e087ff66e564af25d);
+            
+    
+            var marker_4aa6dee7bf890717b84e914b3bc89926 = L.marker(
+                [35.0652, -81.1915],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_b2914197655513189a6791628054a98e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a260111fb6abc88a80a91b95b18930b7 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_d02761832fcd1520b93279b550beb656 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjk3MTA8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyOTcxMDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMSU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNjE8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxNzA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTY1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNDg8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTEwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi4wJTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjA8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI3LjU8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA0OS41MAogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_a260111fb6abc88a80a91b95b18930b7.setContent(i_frame_d02761832fcd1520b93279b550beb656);
+            
+        
+
+        marker_4aa6dee7bf890717b84e914b3bc89926.bindPopup(popup_a260111fb6abc88a80a91b95b18930b7)
+        ;
+
+        
+    
+    
+            marker_4aa6dee7bf890717b84e914b3bc89926.bindTooltip(
+                `<div>
+                     Healthcare Zone 29710
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4aa6dee7bf890717b84e914b3bc89926.setIcon(icon_b2914197655513189a6791628054a98e);
+            
+    
+            var marker_4f529da8b81f5ae94ed42d0680f77eda = L.marker(
+                [34.9953, -80.9447],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_0dae255610c7732644a1f8c55a8c79a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_087a464fb2a3169e1ddfc07ae7d22b96 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_649ae1a4e15e6c31543c187a435aec66 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjk3MTU8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyOTcxNTxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMiU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTU8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxODA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ3PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTUwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTE8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gODAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjAuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDY0LjAwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_087a464fb2a3169e1ddfc07ae7d22b96.setContent(i_frame_649ae1a4e15e6c31543c187a435aec66);
+            
+        
+
+        marker_4f529da8b81f5ae94ed42d0680f77eda.bindPopup(popup_087a464fb2a3169e1ddfc07ae7d22b96)
+        ;
+
+        
+    
+    
+            marker_4f529da8b81f5ae94ed42d0680f77eda.bindTooltip(
+                `<div>
+                     Healthcare Zone 29715
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f529da8b81f5ae94ed42d0680f77eda.setIcon(icon_0dae255610c7732644a1f8c55a8c79a0);
+            
+    
+            var marker_cb9265c60a4690c5fde3b275e9c6dc55 = L.marker(
+                [34.9251, -81.0251],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_d3d6138e52e77e643afd999f507eb8c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25b89f84af25ead198ccbf32a0ce2dc5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_370f55ed7e550f08218bbc1606e28df1 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjk3MzA8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyOTczMDxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxMyU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTc8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAxOTA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ1PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTU1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTQ8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gOTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA1LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDYuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjIuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinIUgWWVzPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiA1MC4xNwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_25b89f84af25ead198ccbf32a0ce2dc5.setContent(i_frame_370f55ed7e550f08218bbc1606e28df1);
+            
+        
+
+        marker_cb9265c60a4690c5fde3b275e9c6dc55.bindPopup(popup_25b89f84af25ead198ccbf32a0ce2dc5)
+        ;
+
+        
+    
+    
+            marker_cb9265c60a4690c5fde3b275e9c6dc55.bindTooltip(
+                `<div>
+                     Healthcare Zone 29730
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb9265c60a4690c5fde3b275e9c6dc55.setIcon(icon_d3d6138e52e77e643afd999f507eb8c3);
+            
+    
+            var marker_cc65059f543908f5cd044672061afa56 = L.marker(
+                [34.9693, -81.0635],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_b931bcb761fff9622f517336ee9d7260 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_922817197ad9942315d2fbb2b70f1e64 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_1e74737aaf597a9f7d24602c13f79017 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5IZWFsdGhjYXJlIFpvbmUgMjk3MzI8L2g0PgogICAgPGI+WklQIENvZGU6PC9iPiAyOTczMjxicj4KICAgIDxiPlVuaW5zdXJlZCBSYXRlIChBY2Nlc3MgQmFycmllcik6PC9iPiAxNCU8YnI+CiAgICA8Yj5EaWFiZXRlcyBSaXNrIChDaHJvbmljIERpc2Vhc2UpOjwvYj4gNTk8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiAyMDA8YnI+CiAgICA8Yj5TdHJva2UgUmlzazo8L2I+IDQ2PGJyPgogICAgPGI+Q2FuY2VyIE1vcnRhbGl0eSBSaXNrOjwvYj4gMTYwPGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTAwMDxicj4KICAgIDxiPkRlbnRpc3QgQXZhaWxhYmlsaXR5OjwvYj4gNi4wJTxicj4KICAgIDxiPlByaW1hcnkgQ2FyZSBBY2Nlc3M6PC9iPiA3LjA8YnI+CiAgICA8Yj5NZW50YWwgSGVhbHRoIFByb3ZpZGVyczo8L2I+IDI1LjA8YnI+CiAgICA8Yj5QaGFybWFjeSBpbiBBcmVhOjwvYj4g4p2MIE5vPGJyPgogICAgPGI+PHNwYW4gc3R5bGU9J2NvbG9yOmJsdWU7Jz5Db21wb3NpdGUgUFNJVCBTY29yZTo8L3NwYW4+PC9iPiAyNi4zMwogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_922817197ad9942315d2fbb2b70f1e64.setContent(i_frame_1e74737aaf597a9f7d24602c13f79017);
+            
+        
+
+        marker_cc65059f543908f5cd044672061afa56.bindPopup(popup_922817197ad9942315d2fbb2b70f1e64)
+        ;
+
+        
+    
+    
+            marker_cc65059f543908f5cd044672061afa56.bindTooltip(
+                `<div>
+                     Healthcare Zone 29732
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cc65059f543908f5cd044672061afa56.setIcon(icon_b931bcb761fff9622f517336ee9d7260);
+            
+    
+            var marker_cf8fed53b8646428c7a5d9a2a54bffba = L.marker(
+                [35.4712, -81.2544],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_697d691aedb7012beea934da5c163990 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15b4b975a5c7aee37c1d17d994ad1866 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_168a700b0e12161b25eb776fb6999f4d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5Qcm9wb3NlZCBPcHRpbWFsIEhlYWx0aGNhcmUgU2l0ZTwvaDQ+CiAgICA8Yj5aSVAgQ29kZTo8L2I+IFByb3Bvc2VkPGJyPgogICAgPGI+VW5pbnN1cmVkIFJhdGUgKEFjY2VzcyBCYXJyaWVyKTo8L2I+IDEzJTxicj4KICAgIDxiPkRpYWJldGVzIFJpc2sgKENocm9uaWMgRGlzZWFzZSk6PC9iPiA2MTxicj4KICAgIDxiPkhlYXJ0IERpc2Vhc2UgUmlzazo8L2I+IDIxMDxicj4KICAgIDxiPlN0cm9rZSBSaXNrOjwvYj4gNDc8YnI+CiAgICA8Yj5DYW5jZXIgTW9ydGFsaXR5IFJpc2s6PC9iPiAxNjU8YnI+CiAgICA8Yj5SZXNwaXJhdG9yeSBSaXNrIChBc3RobWEvQ09QRCk6PC9iPiA1NDxicj4KICAgIDxiPkhJViBQcmV2YWxlbmNlIFJhdGU6PC9iPiAxMTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjUlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuNTxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjcuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IG5hbgogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_15b4b975a5c7aee37c1d17d994ad1866.setContent(i_frame_168a700b0e12161b25eb776fb6999f4d);
+            
+        
+
+        marker_cf8fed53b8646428c7a5d9a2a54bffba.bindPopup(popup_15b4b975a5c7aee37c1d17d994ad1866)
+        ;
+
+        
+    
+    
+            marker_cf8fed53b8646428c7a5d9a2a54bffba.bindTooltip(
+                `<div>
+                     Proposed Optimal Healthcare Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf8fed53b8646428c7a5d9a2a54bffba.setIcon(icon_697d691aedb7012beea934da5c163990);
+            
+    
+            var marker_09e5599fddcc73b1032bf67147f6a3e6 = L.marker(
+                [34.9693, -81.0635],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_4ba2afbe49da2b0cf434768a6ecb424b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4df5e9a08cf7a582f612e6c03c4048a6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_c5426512a90275236f5a5e8e6144959d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5Qcm9wb3NlZCBPcHRpbWFsIEhlYWx0aGNhcmUgU2l0ZTwvaDQ+CiAgICA8Yj5aSVAgQ29kZTo8L2I+IFByb3Bvc2VkPGJyPgogICAgPGI+VW5pbnN1cmVkIFJhdGUgKEFjY2VzcyBCYXJyaWVyKTo8L2I+IDE0JTxicj4KICAgIDxiPkRpYWJldGVzIFJpc2sgKENocm9uaWMgRGlzZWFzZSk6PC9iPiA1OTxicj4KICAgIDxiPkhlYXJ0IERpc2Vhc2UgUmlzazo8L2I+IDIwMDxicj4KICAgIDxiPlN0cm9rZSBSaXNrOjwvYj4gNDY8YnI+CiAgICA8Yj5DYW5jZXIgTW9ydGFsaXR5IFJpc2s6PC9iPiAxNjA8YnI+CiAgICA8Yj5SZXNwaXJhdG9yeSBSaXNrIChBc3RobWEvQ09QRCk6PC9iPiA1Nzxicj4KICAgIDxiPkhJViBQcmV2YWxlbmNlIFJhdGU6PC9iPiAxMDAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjUuMDxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IG5hbgogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_4df5e9a08cf7a582f612e6c03c4048a6.setContent(i_frame_c5426512a90275236f5a5e8e6144959d);
+            
+        
+
+        marker_09e5599fddcc73b1032bf67147f6a3e6.bindPopup(popup_4df5e9a08cf7a582f612e6c03c4048a6)
+        ;
+
+        
+    
+    
+            marker_09e5599fddcc73b1032bf67147f6a3e6.bindTooltip(
+                `<div>
+                     Proposed Optimal Healthcare Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09e5599fddcc73b1032bf67147f6a3e6.setIcon(icon_4ba2afbe49da2b0cf434768a6ecb424b);
+            
+    
+            var marker_4b41bc907fe662825584ba7ac1b60be9 = L.marker(
+                [35.774, -80.8922],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_5121f3a556ad9cea603d8d751205a80f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9585f9a4a94986b5c0e27414ef3855d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_d18718e3013054337dcd13e14c841a78 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5Qcm9wb3NlZCBPcHRpbWFsIEhlYWx0aGNhcmUgU2l0ZTwvaDQ+CiAgICA8Yj5aSVAgQ29kZTo8L2I+IFByb3Bvc2VkPGJyPgogICAgPGI+VW5pbnN1cmVkIFJhdGUgKEFjY2VzcyBCYXJyaWVyKTo8L2I+IDE0JTxicj4KICAgIDxiPkRpYWJldGVzIFJpc2sgKENocm9uaWMgRGlzZWFzZSk6PC9iPiA2MTxicj4KICAgIDxiPkhlYXJ0IERpc2Vhc2UgUmlzazo8L2I+IDE3MDxicj4KICAgIDxiPlN0cm9rZSBSaXNrOjwvYj4gNDY8YnI+CiAgICA8Yj5DYW5jZXIgTW9ydGFsaXR5IFJpc2s6PC9iPiAxNjU8YnI+CiAgICA8Yj5SZXNwaXJhdG9yeSBSaXNrIChBc3RobWEvQ09QRCk6PC9iPiA1Nzxicj4KICAgIDxiPkhJViBQcmV2YWxlbmNlIFJhdGU6PC9iPiAxMTAwPGJyPgogICAgPGI+RGVudGlzdCBBdmFpbGFiaWxpdHk6PC9iPiA2LjAlPGJyPgogICAgPGI+UHJpbWFyeSBDYXJlIEFjY2Vzczo8L2I+IDcuMDxicj4KICAgIDxiPk1lbnRhbCBIZWFsdGggUHJvdmlkZXJzOjwvYj4gMjcuNTxicj4KICAgIDxiPlBoYXJtYWN5IGluIEFyZWE6PC9iPiDinYwgTm88YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IG5hbgogICAg" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_d9585f9a4a94986b5c0e27414ef3855d.setContent(i_frame_d18718e3013054337dcd13e14c841a78);
+            
+        
+
+        marker_4b41bc907fe662825584ba7ac1b60be9.bindPopup(popup_d9585f9a4a94986b5c0e27414ef3855d)
+        ;
+
+        
+    
+    
+            marker_4b41bc907fe662825584ba7ac1b60be9.bindTooltip(
+                `<div>
+                     Proposed Optimal Healthcare Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b41bc907fe662825584ba7ac1b60be9.setIcon(icon_5121f3a556ad9cea603d8d751205a80f);
+            
+    
+            var marker_a8a01e676514003bd5f07c1b2a2fd40d = L.marker(
+                [35.2204, -80.7736],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_a7e0683b687f9ba4f16ce5b9c9416c31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7330de086ea720a2ab7e28f26fff8bd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_2e32a6dafd32f13a876a7c8a4397be29 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5Qcm9wb3NlZCBPcHRpbWFsIEhlYWx0aGNhcmUgU2l0ZTwvaDQ+CiAgICA8Yj5aSVAgQ29kZTo8L2I+IFByb3Bvc2VkPGJyPgogICAgPGI+VW5pbnN1cmVkIFJhdGUgKEFjY2VzcyBCYXJyaWVyKTo8L2I+IDAlPGJyPgogICAgPGI+RGlhYmV0ZXMgUmlzayAoQ2hyb25pYyBEaXNlYXNlKTo8L2I+IDM8YnI+CiAgICA8Yj5IZWFydCBEaXNlYXNlIFJpc2s6PC9iPiA0PGJyPgogICAgPGI+U3Ryb2tlIFJpc2s6PC9iPiAyMDxicj4KICAgIDxiPkNhbmNlciBNb3J0YWxpdHkgUmlzazo8L2I+IDE1PGJyPgogICAgPGI+UmVzcGlyYXRvcnkgUmlzayAoQXN0aG1hL0NPUEQpOjwvYj4gNTc8YnI+CiAgICA8Yj5ISVYgUHJldmFsZW5jZSBSYXRlOjwvYj4gMTA8YnI+CiAgICA8Yj5EZW50aXN0IEF2YWlsYWJpbGl0eTo8L2I+IDkuMCU8YnI+CiAgICA8Yj5QcmltYXJ5IENhcmUgQWNjZXNzOjwvYj4gOS4wPGJyPgogICAgPGI+TWVudGFsIEhlYWx0aCBQcm92aWRlcnM6PC9iPiA5Ny41PGJyPgogICAgPGI+UGhhcm1hY3kgaW4gQXJlYTo8L2I+IOKchSBZZXM8YnI+CiAgICA8Yj48c3BhbiBzdHlsZT0nY29sb3I6Ymx1ZTsnPkNvbXBvc2l0ZSBQU0lUIFNjb3JlOjwvc3Bhbj48L2I+IDk1LjAwCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_f7330de086ea720a2ab7e28f26fff8bd.setContent(i_frame_2e32a6dafd32f13a876a7c8a4397be29);
+            
+        
+
+        marker_a8a01e676514003bd5f07c1b2a2fd40d.bindPopup(popup_f7330de086ea720a2ab7e28f26fff8bd)
+        ;
+
+        
+    
+    
+            marker_a8a01e676514003bd5f07c1b2a2fd40d.bindTooltip(
+                `<div>
+                     Proposed Optimal Healthcare Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a8a01e676514003bd5f07c1b2a2fd40d.setIcon(icon_a7e0683b687f9ba4f16ce5b9c9416c31);
+            
+    
+            var marker_400d95c865d74b0142a9ef7c874989a4 = L.marker(
+                [34.895, -80.7393],
+                {
+}
+            ).addTo(map_fcb7163a2024c90ee26474eab32e71c5);
+        
+    
+            var icon_1ef085e797e9ff7aa6c4e225c4a96a4c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3951893466d285559c3d33622208b31f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var i_frame_903c5e6e292b9dcc0b8581811b5a236f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxoND5Qcm9wb3NlZCBPcHRpbWFsIEhlYWx0aGNhcmUgU2l0ZTwvaDQ+CiAgICA8Yj5aSVAgQ29kZTo8L2I+IFByb3Bvc2VkPGJyPgogICAgPGI+VW5pbnN1cmVkIFJhdGUgKEFjY2VzcyBCYXJyaWVyKTo8L2I+IDE0JTxicj4KICAgIDxiPkRpYWJldGVzIFJpc2sgKENocm9uaWMgRGlzZWFzZSk6PC9iPiA1Nzxicj4KICAgIDxiPkhlYXJ0IERpc2Vhc2UgUmlzazo8L2I+IDIxMDxicj4KICAgIDxiPlN0cm9rZSBSaXNrOjwvYj4gNDc8YnI+CiAgICA8Yj5DYW5jZXIgTW9ydGFsaXR5IFJpc2s6PC9iPiAxNTU8YnI+CiAgICA8Yj5SZXNwaXJhdG9yeSBSaXNrIChBc3RobWEvQ09QRCk6PC9iPiA1Nzxicj4KICAgIDxiPkhJViBQcmV2YWxlbmNlIFJhdGU6PC9iPiA5MDA8YnI+CiAgICA8Yj5EZW50aXN0IEF2YWlsYWJpbGl0eTo8L2I+IDYuNSU8YnI+CiAgICA8Yj5QcmltYXJ5IENhcmUgQWNjZXNzOjwvYj4gNy41PGJyPgogICAgPGI+TWVudGFsIEhlYWx0aCBQcm92aWRlcnM6PC9iPiAyMi41PGJyPgogICAgPGI+UGhhcm1hY3kgaW4gQXJlYTo8L2I+IOKdjCBObzxicj4KICAgIDxiPjxzcGFuIHN0eWxlPSdjb2xvcjpibHVlOyc+Q29tcG9zaXRlIFBTSVQgU2NvcmU6PC9zcGFuPjwvYj4gbmFuCiAgICA=" width="340" style="border:none !important;" height="450"></iframe>`)[0];
+                popup_3951893466d285559c3d33622208b31f.setContent(i_frame_903c5e6e292b9dcc0b8581811b5a236f);
+            
+        
+
+        marker_400d95c865d74b0142a9ef7c874989a4.bindPopup(popup_3951893466d285559c3d33622208b31f)
+        ;
+
+        
+    
+    
+            marker_400d95c865d74b0142a9ef7c874989a4.bindTooltip(
+                `<div>
+                     Proposed Optimal Healthcare Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_400d95c865d74b0142a9ef7c874989a4.setIcon(icon_1ef085e797e9ff7aa6c4e225c4a96a4c);
+            
+</script>
+</html>

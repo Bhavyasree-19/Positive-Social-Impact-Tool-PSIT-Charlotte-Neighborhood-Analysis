@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d515d3e5781b40006a10018564dcdf73 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d515d3e5781b40006a10018564dcdf73" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d515d3e5781b40006a10018564dcdf73 = L.map(
+                "map_d515d3e5781b40006a10018564dcdf73",
+                {
+                    center: [35.2271, -80.8431],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d742b466f41a9962cc62d5f1a5a04bf1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d742b466f41a9962cc62d5f1a5a04bf1.addTo(map_d515d3e5781b40006a10018564dcdf73);
+        
+    
+            var marker_cluster_55274e2d2c273c0c1829308dc57f5c8a = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_bcac824df34bc077907b6e86056d4afa = L.marker(
+                [35.2489, -80.8815],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_9b0938b4c237f0e1ea16690875ede3d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_335d82101d39a3febd523d7426b3cb91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5baa5626f3a28d7132f14b3177e2445b = $(`<div id="html_5baa5626f3a28d7132f14b3177e2445b" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Bette Rae Thomas Recreation Center<br>             <b>📍 ZIP:</b> 28208<br>             <b>🚦 Rating:</b> High<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> Residential west Charlotte, many homes nearby<br>             <b>📊 PIST Score:</b> 3         </div>         </div>`)[0];
+                popup_335d82101d39a3febd523d7426b3cb91.setContent(html_5baa5626f3a28d7132f14b3177e2445b);
+            
+        
+
+        marker_bcac824df34bc077907b6e86056d4afa.bindPopup(popup_335d82101d39a3febd523d7426b3cb91)
+        ;
+
+        
+    
+    
+                marker_bcac824df34bc077907b6e86056d4afa.setIcon(icon_9b0938b4c237f0e1ea16690875ede3d6);
+            
+    
+            var marker_9fdbfec0edd027b30c3c51750f43f78d = L.marker(
+                [35.2392, -80.7732],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_97d1f1dfbf6f01db9559f566e5c06e68 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b1488155f17c824aef8947bd6906ab8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05ff986227434af25586b70b620e571f = $(`<div id="html_05ff986227434af25586b70b620e571f" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Eastway Regional Recreation Center<br>             <b>📍 ZIP:</b> 28213<br>             <b>🚦 Rating:</b> High<br>             <b>🚶 Proximity:</b> Moderate<br>             <b>💬 Comment:</b> East Charlotte, near homes but best accessed by car<br>             <b>📊 PIST Score:</b> 3         </div>         </div>`)[0];
+                popup_5b1488155f17c824aef8947bd6906ab8.setContent(html_05ff986227434af25586b70b620e571f);
+            
+        
+
+        marker_9fdbfec0edd027b30c3c51750f43f78d.bindPopup(popup_5b1488155f17c824aef8947bd6906ab8)
+        ;
+
+        
+    
+    
+                marker_9fdbfec0edd027b30c3c51750f43f78d.setIcon(icon_97d1f1dfbf6f01db9559f566e5c06e68);
+            
+    
+            var marker_182af94fdf9d52db3c88ec43da474387 = L.marker(
+                [35.3464, -80.769],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_07edefc88a5201f0cd1a430235968175 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4a5f0ce38f0fb648f7c444cfb15a6b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c7601dc80cf5fb6bb77217919bc7c093 = $(`<div id="html_c7601dc80cf5fb6bb77217919bc7c093" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Mallard Creek Recreation Center<br>             <b>📍 ZIP:</b> 28269<br>             <b>🚦 Rating:</b> High<br>             <b>🚶 Proximity:</b> Moderate<br>             <b>💬 Comment:</b> In suburban neighborhood; car access mostly<br>             <b>📊 PIST Score:</b> 3         </div>         </div>`)[0];
+                popup_d4a5f0ce38f0fb648f7c444cfb15a6b3.setContent(html_c7601dc80cf5fb6bb77217919bc7c093);
+            
+        
+
+        marker_182af94fdf9d52db3c88ec43da474387.bindPopup(popup_d4a5f0ce38f0fb648f7c444cfb15a6b3)
+        ;
+
+        
+    
+    
+                marker_182af94fdf9d52db3c88ec43da474387.setIcon(icon_07edefc88a5201f0cd1a430235968175);
+            
+    
+            var marker_bd0edf6143a1ae65fec0fe0ad90fec2f = L.marker(
+                [35.2671, -80.8026],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_60e211fb02786d9b26b3dfa56a088495 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c041f7853e672efef6bbcfa65b069283 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c617e821d54a7754a26be479d5c68cdc = $(`<div id="html_c617e821d54a7754a26be479d5c68cdc" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Sugaw Creek Recreation Center<br>             <b>📍 ZIP:</b> 28213<br>             <b>🚦 Rating:</b> Low<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> Hidden Valley residential zone nearby<br>             <b>📊 PIST Score:</b> 1         </div>         </div>`)[0];
+                popup_c041f7853e672efef6bbcfa65b069283.setContent(html_c617e821d54a7754a26be479d5c68cdc);
+            
+        
+
+        marker_bd0edf6143a1ae65fec0fe0ad90fec2f.bindPopup(popup_c041f7853e672efef6bbcfa65b069283)
+        ;
+
+        
+    
+    
+                marker_bd0edf6143a1ae65fec0fe0ad90fec2f.setIcon(icon_60e211fb02786d9b26b3dfa56a088495);
+            
+    
+            var marker_4434a2164a803f91de79195ad1d1c31f = L.marker(
+                [35.2332, -80.8662],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_46efd81d2e9157691f0e8ec8b730fe3b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81a9bb0022e75d2b6bf194c321807798 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39e3bdcdd51a231f83945361976fa9cf = $(`<div id="html_39e3bdcdd51a231f83945361976fa9cf" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Wallace Pruitt Recreation Center<br>             <b>📍 ZIP:</b> 28208<br>             <b>🚦 Rating:</b> High<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> Near Biddleville/Five Points neighborhoods<br>             <b>📊 PIST Score:</b> 3         </div>         </div>`)[0];
+                popup_81a9bb0022e75d2b6bf194c321807798.setContent(html_39e3bdcdd51a231f83945361976fa9cf);
+            
+        
+
+        marker_4434a2164a803f91de79195ad1d1c31f.bindPopup(popup_81a9bb0022e75d2b6bf194c321807798)
+        ;
+
+        
+    
+    
+                marker_4434a2164a803f91de79195ad1d1c31f.setIcon(icon_46efd81d2e9157691f0e8ec8b730fe3b);
+            
+    
+            var marker_0b696d8795e49ac9006f9bc252191c87 = L.marker(
+                [35.2302, -80.8738],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_d678b33c1e777ee0ca30483d4fd92bf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1615db9f20b7febd8fbb62c009f25cb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd0879c05f7320f4670b49d610d13e8d = $(`<div id="html_fd0879c05f7320f4670b49d610d13e8d" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Southview Recreation Center<br>             <b>📍 ZIP:</b> 28208<br>             <b>🚦 Rating:</b> Low<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> Close to West Blvd residential area<br>             <b>📊 PIST Score:</b> 1         </div>         </div>`)[0];
+                popup_a1615db9f20b7febd8fbb62c009f25cb.setContent(html_fd0879c05f7320f4670b49d610d13e8d);
+            
+        
+
+        marker_0b696d8795e49ac9006f9bc252191c87.bindPopup(popup_a1615db9f20b7febd8fbb62c009f25cb)
+        ;
+
+        
+    
+    
+                marker_0b696d8795e49ac9006f9bc252191c87.setIcon(icon_d678b33c1e777ee0ca30483d4fd92bf4);
+            
+    
+            var marker_6922e1bffc9b5ebd808f4606631df6a0 = L.marker(
+                [35.2628, -80.8602],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_9c4bc199c42254fcb305693ad3d18d21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cbf12264365a1cb5b1e725d86545b4a2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_80a022b0d5903fb2e0aee57d7c13c472 = $(`<div id="html_80a022b0d5903fb2e0aee57d7c13c472" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> West Charlotte Recreation Center<br>             <b>📍 ZIP:</b> 28216<br>             <b>🚦 Rating:</b> High<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> Kendall Drive residential zones<br>             <b>📊 PIST Score:</b> 3         </div>         </div>`)[0];
+                popup_cbf12264365a1cb5b1e725d86545b4a2.setContent(html_80a022b0d5903fb2e0aee57d7c13c472);
+            
+        
+
+        marker_6922e1bffc9b5ebd808f4606631df6a0.bindPopup(popup_cbf12264365a1cb5b1e725d86545b4a2)
+        ;
+
+        
+    
+    
+                marker_6922e1bffc9b5ebd808f4606631df6a0.setIcon(icon_9c4bc199c42254fcb305693ad3d18d21);
+            
+    
+            var marker_c1763541a98acc3a7710f37b95d46413 = L.marker(
+                [35.2305, -80.7346],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_1977f70c69ea3cc5efa69515e3503ac8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_390cd43e07996ecdeada9740a094bd06 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e40906f769df803d0c08a8cce3cad490 = $(`<div id="html_e40906f769df803d0c08a8cce3cad490" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Hickory Grove Recreation Center<br>             <b>📍 ZIP:</b> 28215<br>             <b>🚦 Rating:</b> High<br>             <b>🚶 Proximity:</b> Moderate<br>             <b>💬 Comment:</b> Accessible but more suburban spacing<br>             <b>📊 PIST Score:</b> 3         </div>         </div>`)[0];
+                popup_390cd43e07996ecdeada9740a094bd06.setContent(html_e40906f769df803d0c08a8cce3cad490);
+            
+        
+
+        marker_c1763541a98acc3a7710f37b95d46413.bindPopup(popup_390cd43e07996ecdeada9740a094bd06)
+        ;
+
+        
+    
+    
+                marker_c1763541a98acc3a7710f37b95d46413.setIcon(icon_1977f70c69ea3cc5efa69515e3503ac8);
+            
+    
+            var marker_1c778a345eab10f93892b5d65d00be92 = L.marker(
+                [35.2368, -80.7765],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_0797f6e42900150518645ee1ad655735 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d37df6697cb86052d27a074dd3d44c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_15328b489aa7d9562c0f97dfb13dba93 = $(`<div id="html_15328b489aa7d9562c0f97dfb13dba93" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Methodist Home Park Recreation Center<br>             <b>📍 ZIP:</b> 28215<br>             <b>🚦 Rating:</b> Low<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> In Shamrock neighborhood zone<br>             <b>📊 PIST Score:</b> 1         </div>         </div>`)[0];
+                popup_7d37df6697cb86052d27a074dd3d44c4.setContent(html_15328b489aa7d9562c0f97dfb13dba93);
+            
+        
+
+        marker_1c778a345eab10f93892b5d65d00be92.bindPopup(popup_7d37df6697cb86052d27a074dd3d44c4)
+        ;
+
+        
+    
+    
+                marker_1c778a345eab10f93892b5d65d00be92.setIcon(icon_0797f6e42900150518645ee1ad655735);
+            
+    
+            var marker_bc73a1ed4811fa3309ea95ccc67b62ee = L.marker(
+                [35.2126, -80.8569],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_ae0eef7afe3d8bcfebf57f5a5fa2a4b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d210c7d03aa2ba981e2135f2d504e2e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e38f536d1375e84ffce72d8bbcf93564 = $(`<div id="html_e38f536d1375e84ffce72d8bbcf93564" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Wilmore Community Center<br>             <b>📍 ZIP:</b> 28203<br>             <b>🚦 Rating:</b> Low<br>             <b>🚶 Proximity:</b> Close<br>             <b>💬 Comment:</b> Dense historic Wilmore neighborhood, walkable<br>             <b>📊 PIST Score:</b> 1         </div>         </div>`)[0];
+                popup_8d210c7d03aa2ba981e2135f2d504e2e.setContent(html_e38f536d1375e84ffce72d8bbcf93564);
+            
+        
+
+        marker_bc73a1ed4811fa3309ea95ccc67b62ee.bindPopup(popup_8d210c7d03aa2ba981e2135f2d504e2e)
+        ;
+
+        
+    
+    
+                marker_bc73a1ed4811fa3309ea95ccc67b62ee.setIcon(icon_ae0eef7afe3d8bcfebf57f5a5fa2a4b6);
+            
+    
+            var marker_cb135baf6b42ef599128f9b44e5acbc6 = L.marker(
+                [35.1309, -80.8612],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_b8345135c8e7628d09f90ae378e22688 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7d4d68aab78cc2276e8498d2280d156 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49a1378de53fb58b11edab0705a47129 = $(`<div id="html_49a1378de53fb58b11edab0705a47129" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Proposed Center - South Charlotte<br>             <b>📍 ZIP:</b> 28210<br>             <b>🚦 Rating:</b> Proposed<br>             <b>🚶 Proximity:</b> High Need Area<br>             <b>💬 Comment:</b> Lacks recreational space for dense apartments<br>             <b>📊 PIST Score:</b> 4         </div>         </div>`)[0];
+                popup_c7d4d68aab78cc2276e8498d2280d156.setContent(html_49a1378de53fb58b11edab0705a47129);
+            
+        
+
+        marker_cb135baf6b42ef599128f9b44e5acbc6.bindPopup(popup_c7d4d68aab78cc2276e8498d2280d156)
+        ;
+
+        
+    
+    
+                marker_cb135baf6b42ef599128f9b44e5acbc6.setIcon(icon_b8345135c8e7628d09f90ae378e22688);
+            
+    
+            var marker_499536d67863ee4e6cab9825c1eb71e9 = L.marker(
+                [35.2655, -80.8303],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_ae3321bf18f23f776a90550c23c034ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c38f8b8a1e51330e9f289e63343d9dce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_392783ebe3df21ab98b4b52b00496a3e = $(`<div id="html_392783ebe3df21ab98b4b52b00496a3e" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Proposed Center - North End<br>             <b>📍 ZIP:</b> 28206<br>             <b>🚦 Rating:</b> Proposed<br>             <b>🚶 Proximity:</b> High Need Area<br>             <b>💬 Comment:</b> High youth population, no nearby facilities<br>             <b>📊 PIST Score:</b> 4         </div>         </div>`)[0];
+                popup_c38f8b8a1e51330e9f289e63343d9dce.setContent(html_392783ebe3df21ab98b4b52b00496a3e);
+            
+        
+
+        marker_499536d67863ee4e6cab9825c1eb71e9.bindPopup(popup_c38f8b8a1e51330e9f289e63343d9dce)
+        ;
+
+        
+    
+    
+                marker_499536d67863ee4e6cab9825c1eb71e9.setIcon(icon_ae3321bf18f23f776a90550c23c034ec);
+            
+    
+            var marker_82f0bdd59cf3cad34aaca82c49ab6078 = L.marker(
+                [35.2449, -80.8867],
+                {
+}
+            ).addTo(marker_cluster_55274e2d2c273c0c1829308dc57f5c8a);
+        
+    
+            var icon_62ebb84cf497fea9e8c5dfaa55febfc9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7309d133b964366227a3a4de8491a183 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8f7de18b3386f363e0fa046827c6e5a6 = $(`<div id="html_8f7de18b3386f363e0fa046827c6e5a6" style="width: 100.0%; height: 100.0%;">         <div style="font-size: 14px;">             <b>🏛️ Rec Center:</b> Proposed Center - West Trade<br>             <b>📍 ZIP:</b> 28208<br>             <b>🚦 Rating:</b> Proposed<br>             <b>🚶 Proximity:</b> High Need Area<br>             <b>💬 Comment:</b> Underserved by both parks and rec centers<br>             <b>📊 PIST Score:</b> 4         </div>         </div>`)[0];
+                popup_7309d133b964366227a3a4de8491a183.setContent(html_8f7de18b3386f363e0fa046827c6e5a6);
+            
+        
+
+        marker_82f0bdd59cf3cad34aaca82c49ab6078.bindPopup(popup_7309d133b964366227a3a4de8491a183)
+        ;
+
+        
+    
+    
+                marker_82f0bdd59cf3cad34aaca82c49ab6078.setIcon(icon_62ebb84cf497fea9e8c5dfaa55febfc9);
+            
+    
+            marker_cluster_55274e2d2c273c0c1829308dc57f5c8a.addTo(map_d515d3e5781b40006a10018564dcdf73);
+        
+    
+            tile_layer_d742b466f41a9962cc62d5f1a5a04bf1.addTo(map_d515d3e5781b40006a10018564dcdf73);
+        
+    
+                marker_bcac824df34bc077907b6e86056d4afa.setIcon(icon_9b0938b4c237f0e1ea16690875ede3d6);
+            
+    
+                marker_9fdbfec0edd027b30c3c51750f43f78d.setIcon(icon_97d1f1dfbf6f01db9559f566e5c06e68);
+            
+    
+                marker_182af94fdf9d52db3c88ec43da474387.setIcon(icon_07edefc88a5201f0cd1a430235968175);
+            
+    
+                marker_bd0edf6143a1ae65fec0fe0ad90fec2f.setIcon(icon_60e211fb02786d9b26b3dfa56a088495);
+            
+    
+                marker_4434a2164a803f91de79195ad1d1c31f.setIcon(icon_46efd81d2e9157691f0e8ec8b730fe3b);
+            
+    
+                marker_0b696d8795e49ac9006f9bc252191c87.setIcon(icon_d678b33c1e777ee0ca30483d4fd92bf4);
+            
+    
+                marker_6922e1bffc9b5ebd808f4606631df6a0.setIcon(icon_9c4bc199c42254fcb305693ad3d18d21);
+            
+    
+                marker_c1763541a98acc3a7710f37b95d46413.setIcon(icon_1977f70c69ea3cc5efa69515e3503ac8);
+            
+    
+                marker_1c778a345eab10f93892b5d65d00be92.setIcon(icon_0797f6e42900150518645ee1ad655735);
+            
+    
+                marker_bc73a1ed4811fa3309ea95ccc67b62ee.setIcon(icon_ae0eef7afe3d8bcfebf57f5a5fa2a4b6);
+            
+    
+                marker_cb135baf6b42ef599128f9b44e5acbc6.setIcon(icon_b8345135c8e7628d09f90ae378e22688);
+            
+    
+                marker_499536d67863ee4e6cab9825c1eb71e9.setIcon(icon_ae3321bf18f23f776a90550c23c034ec);
+            
+    
+                marker_82f0bdd59cf3cad34aaca82c49ab6078.setIcon(icon_62ebb84cf497fea9e8c5dfaa55febfc9);
+            
+    
+            marker_cluster_55274e2d2c273c0c1829308dc57f5c8a.addTo(map_d515d3e5781b40006a10018564dcdf73);
+        
+</script>
+</html>

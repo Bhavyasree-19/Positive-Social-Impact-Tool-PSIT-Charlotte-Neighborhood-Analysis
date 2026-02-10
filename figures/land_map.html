@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8029b3cb26561e65bbbcdb79e961903b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8029b3cb26561e65bbbcdb79e961903b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8029b3cb26561e65bbbcdb79e961903b = L.map(
+                "map_8029b3cb26561e65bbbcdb79e961903b",
+                {
+                    center: [35.3, -80.85],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_31537e83dbd46b64cacc7b5fcd60203f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_31537e83dbd46b64cacc7b5fcd60203f.addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var marker_0d6d84e0997fda745b61850d6c9f0f59 = L.marker(
+                [35.2271, -80.8431],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_f453b135a8bda3d49454ae8199da5ced = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cce0ac299539e9b3a520494d2a6ff9c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ab14316022a354fd9395adcc4fc3c1b = $(`<div id="html_1ab14316022a354fd9395adcc4fc3c1b" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28202<br>     County: Mecklenburg<br>     Area: Urban Charlotte<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_cce0ac299539e9b3a520494d2a6ff9c5.setContent(html_1ab14316022a354fd9395adcc4fc3c1b);
+            
+        
+
+        marker_0d6d84e0997fda745b61850d6c9f0f59.bindPopup(popup_cce0ac299539e9b3a520494d2a6ff9c5)
+        ;
+
+        
+    
+    
+                marker_0d6d84e0997fda745b61850d6c9f0f59.setIcon(icon_f453b135a8bda3d49454ae8199da5ced);
+            
+    
+            var marker_e9cf70433f3371a77bb7f795d8220778 = L.marker(
+                [35.2154, -80.8601],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_163446151bbe111dd0b1269abb5c6467 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef645cb9894a32888cabcb3e61620175 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ad8e06d32615186c0e4e3bcb00a5f744 = $(`<div id="html_ad8e06d32615186c0e4e3bcb00a5f744" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28203<br>     County: Mecklenburg<br>     Area: Urban Charlotte<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_ef645cb9894a32888cabcb3e61620175.setContent(html_ad8e06d32615186c0e4e3bcb00a5f744);
+            
+        
+
+        marker_e9cf70433f3371a77bb7f795d8220778.bindPopup(popup_ef645cb9894a32888cabcb3e61620175)
+        ;
+
+        
+    
+    
+                marker_e9cf70433f3371a77bb7f795d8220778.setIcon(icon_163446151bbe111dd0b1269abb5c6467);
+            
+    
+            var marker_9759b82cff9e0064df743a294529eb88 = L.marker(
+                [35.214, -80.8331],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_7bd464ae68fac5eb7f5439327cf41dc8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e75465facc34984d8507ec100d1e33cb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cec745db1dc6aa766d1456dbc2deb39e = $(`<div id="html_cec745db1dc6aa766d1456dbc2deb39e" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28204<br>     County: Mecklenburg<br>     Area: Urban Charlotte<br>     <b>Land PSIT Score</b>: 1 / 3     </div>`)[0];
+                popup_e75465facc34984d8507ec100d1e33cb.setContent(html_cec745db1dc6aa766d1456dbc2deb39e);
+            
+        
+
+        marker_9759b82cff9e0064df743a294529eb88.bindPopup(popup_e75465facc34984d8507ec100d1e33cb)
+        ;
+
+        
+    
+    
+                marker_9759b82cff9e0064df743a294529eb88.setIcon(icon_7bd464ae68fac5eb7f5439327cf41dc8);
+            
+    
+            var marker_941dc74f3a444747842b8bff932609bc = L.marker(
+                [35.2204, -80.7736],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_d25d1bad159400ac0afb378676d2d76f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_07b1aa40d52d8e37afe51632d5fb66ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_27553a6f42c786c23485e75118caf834 = $(`<div id="html_27553a6f42c786c23485e75118caf834" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28205<br>     County: Mecklenburg<br>     Area: Urban Charlotte<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_07b1aa40d52d8e37afe51632d5fb66ed.setContent(html_27553a6f42c786c23485e75118caf834);
+            
+        
+
+        marker_941dc74f3a444747842b8bff932609bc.bindPopup(popup_07b1aa40d52d8e37afe51632d5fb66ed)
+        ;
+
+        
+    
+    
+                marker_941dc74f3a444747842b8bff932609bc.setIcon(icon_d25d1bad159400ac0afb378676d2d76f);
+            
+    
+            var marker_f08d2e3644df75bc7000cf86aa9be47c = L.marker(
+                [35.2571, -80.819],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_74b07282c1509e331598bd07d6c1ce50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd9a0d70b97026cac9d4a24bd430db98 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c24963ad6f4d0b91aca5c7790410aba4 = $(`<div id="html_c24963ad6f4d0b91aca5c7790410aba4" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28206<br>     County: Mecklenburg<br>     Area: Urban Charlotte<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_bd9a0d70b97026cac9d4a24bd430db98.setContent(html_c24963ad6f4d0b91aca5c7790410aba4);
+            
+        
+
+        marker_f08d2e3644df75bc7000cf86aa9be47c.bindPopup(popup_bd9a0d70b97026cac9d4a24bd430db98)
+        ;
+
+        
+    
+    
+                marker_f08d2e3644df75bc7000cf86aa9be47c.setIcon(icon_74b07282c1509e331598bd07d6c1ce50);
+            
+    
+            var marker_dae3d81cb36226168c31d94e95ef845f = L.marker(
+                [35.24, -81.0429],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_0bebe8278eb3948628c2973ef41c7f3b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a690e560eab2291603b52256bc65acf5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5f70e3a60510bbce9b002af5cd6b7aa9 = $(`<div id="html_5f70e3a60510bbce9b002af5cd6b7aa9" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28012<br>     County: Gaston<br>     Area: Gastonia & Surroundings<br>     <b>Land PSIT Score</b>: 1 / 3     </div>`)[0];
+                popup_a690e560eab2291603b52256bc65acf5.setContent(html_5f70e3a60510bbce9b002af5cd6b7aa9);
+            
+        
+
+        marker_dae3d81cb36226168c31d94e95ef845f.bindPopup(popup_a690e560eab2291603b52256bc65acf5)
+        ;
+
+        
+    
+    
+                marker_dae3d81cb36226168c31d94e95ef845f.setIcon(icon_0bebe8278eb3948628c2973ef41c7f3b);
+            
+    
+            var marker_5cab10ae500c46b214b70b79cd252972 = L.marker(
+                [35.2522, -81.5623],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_5148f54c570a4095253036e6c2bf02cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_353271bfa9da89cab243ce81abacda77 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ddb76c5f861c17c08e45bc893bcefa26 = $(`<div id="html_ddb76c5f861c17c08e45bc893bcefa26" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28016<br>     County: Gaston<br>     Area: Gastonia Suburban<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_353271bfa9da89cab243ce81abacda77.setContent(html_ddb76c5f861c17c08e45bc893bcefa26);
+            
+        
+
+        marker_5cab10ae500c46b214b70b79cd252972.bindPopup(popup_353271bfa9da89cab243ce81abacda77)
+        ;
+
+        
+    
+    
+                marker_5cab10ae500c46b214b70b79cd252972.setIcon(icon_5148f54c570a4095253036e6c2bf02cb);
+            
+    
+            var marker_d35d875e2840d786b6ca9462783f8da4 = L.marker(
+                [35.3196, -81.5356],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_856f825e0531fca5f0d98e9bd47920fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62fde20b5d2837ca1ebfb5ab9a7ee329 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e5fd8a5cfa10efcdfa2657906ced11b7 = $(`<div id="html_e5fd8a5cfa10efcdfa2657906ced11b7" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28021<br>     County: Gaston<br>     Area: Gastonia West<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_62fde20b5d2837ca1ebfb5ab9a7ee329.setContent(html_e5fd8a5cfa10efcdfa2657906ced11b7);
+            
+        
+
+        marker_d35d875e2840d786b6ca9462783f8da4.bindPopup(popup_62fde20b5d2837ca1ebfb5ab9a7ee329)
+        ;
+
+        
+    
+    
+                marker_d35d875e2840d786b6ca9462783f8da4.setIcon(icon_856f825e0531fca5f0d98e9bd47920fd);
+            
+    
+            var marker_51f7cd7f58002fab45e35852032f1dc8 = L.marker(
+                [35.3642, -81.2187],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_b491e868af8ecbc1e5b4170544ab62f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1012c5942b78fe0c21de9f5d85346e74 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_30631b1aca9979b1e441e4bfbd6445df = $(`<div id="html_30631b1aca9979b1e441e4bfbd6445df" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28034<br>     County: Gaston<br>     Area: Gastonia South<br>     <b>Land PSIT Score</b>: 1 / 3     </div>`)[0];
+                popup_1012c5942b78fe0c21de9f5d85346e74.setContent(html_30631b1aca9979b1e441e4bfbd6445df);
+            
+        
+
+        marker_51f7cd7f58002fab45e35852032f1dc8.bindPopup(popup_1012c5942b78fe0c21de9f5d85346e74)
+        ;
+
+        
+    
+    
+                marker_51f7cd7f58002fab45e35852032f1dc8.setIcon(icon_b491e868af8ecbc1e5b4170544ab62f9);
+            
+    
+            var marker_21fac0bf81e5e89da1ce51ad79522cf1 = L.marker(
+                [35.2632, -81.1873],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_b95f218a17320567e0a6775bc629056a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1023b36ef7fcb181d758ddf0011792b7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19c85abf813dd6844dfa1ad51a4e04f4 = $(`<div id="html_19c85abf813dd6844dfa1ad51a4e04f4" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28052<br>     County: Gaston<br>     Area: Gastonia Central<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_1023b36ef7fcb181d758ddf0011792b7.setContent(html_19c85abf813dd6844dfa1ad51a4e04f4);
+            
+        
+
+        marker_21fac0bf81e5e89da1ce51ad79522cf1.bindPopup(popup_1023b36ef7fcb181d758ddf0011792b7)
+        ;
+
+        
+    
+    
+                marker_21fac0bf81e5e89da1ce51ad79522cf1.setIcon(icon_b95f218a17320567e0a6775bc629056a);
+            
+    
+            var marker_57075f7bf12ce26325be4b0f2a37d9ab = L.marker(
+                [35.5849, -80.8099],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_e9fc23f6672e37b3fb4f4e4dd72fee96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc5599d97fe0a541d19388d93b265425 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b7d1b0aa8ffa5be675fafb6ae3dfb71 = $(`<div id="html_6b7d1b0aa8ffa5be675fafb6ae3dfb71" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28115<br>     County: Iredell<br>     Area: Mooresville Area<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_fc5599d97fe0a541d19388d93b265425.setContent(html_6b7d1b0aa8ffa5be675fafb6ae3dfb71);
+            
+        
+
+        marker_57075f7bf12ce26325be4b0f2a37d9ab.bindPopup(popup_fc5599d97fe0a541d19388d93b265425)
+        ;
+
+        
+    
+    
+                marker_57075f7bf12ce26325be4b0f2a37d9ab.setIcon(icon_e9fc23f6672e37b3fb4f4e4dd72fee96);
+            
+    
+            var marker_0e80ca52f9f07aefa7c0035995d7b8e6 = L.marker(
+                [35.6025, -80.897],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_8a325e4ae799f29632ffa8179ea00277 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_556eb6d085fb2bd3e109efc8d12f2c41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47aeba11095f9eee3a455cb9f9865beb = $(`<div id="html_47aeba11095f9eee3a455cb9f9865beb" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28117<br>     County: Iredell<br>     Area: Mooresville North<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_556eb6d085fb2bd3e109efc8d12f2c41.setContent(html_47aeba11095f9eee3a455cb9f9865beb);
+            
+        
+
+        marker_0e80ca52f9f07aefa7c0035995d7b8e6.bindPopup(popup_556eb6d085fb2bd3e109efc8d12f2c41)
+        ;
+
+        
+    
+    
+                marker_0e80ca52f9f07aefa7c0035995d7b8e6.setIcon(icon_8a325e4ae799f29632ffa8179ea00277);
+            
+    
+            var marker_55fef0a0062edc33148b83318f57572a = L.marker(
+                [35.7054, -80.8973],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_4d71ba822524b8cd7c312278912784e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_626f88637c5c7ec57dec062daeab27b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fcaa59b31985c3f2611f96b1c8c06b87 = $(`<div id="html_fcaa59b31985c3f2611f96b1c8c06b87" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28166<br>     County: Iredell<br>     Area: Statesville South<br>     <b>Land PSIT Score</b>: 2 / 3     </div>`)[0];
+                popup_626f88637c5c7ec57dec062daeab27b6.setContent(html_fcaa59b31985c3f2611f96b1c8c06b87);
+            
+        
+
+        marker_55fef0a0062edc33148b83318f57572a.bindPopup(popup_626f88637c5c7ec57dec062daeab27b6)
+        ;
+
+        
+    
+    
+                marker_55fef0a0062edc33148b83318f57572a.setIcon(icon_4d71ba822524b8cd7c312278912784e9);
+            
+    
+            var marker_2bd5b2cd823a8255e5ef28a26739f09c = L.marker(
+                [35.7826, -80.8873],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_32fc8ab5f05405ae8018efa203d1fb47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c0e0fa94eec9aa64aa8323dcedc3600 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d387d3e08de4ee5908193bd1346a915 = $(`<div id="html_8d387d3e08de4ee5908193bd1346a915" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28625<br>     County: Iredell<br>     Area: Statesville Central<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_0c0e0fa94eec9aa64aa8323dcedc3600.setContent(html_8d387d3e08de4ee5908193bd1346a915);
+            
+        
+
+        marker_2bd5b2cd823a8255e5ef28a26739f09c.bindPopup(popup_0c0e0fa94eec9aa64aa8323dcedc3600)
+        ;
+
+        
+    
+    
+                marker_2bd5b2cd823a8255e5ef28a26739f09c.setIcon(icon_32fc8ab5f05405ae8018efa203d1fb47);
+            
+    
+            var marker_da56cc04676259b25f5b20f69eb1d9ba = L.marker(
+                [35.774, -80.8922],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_942a73da75ed40d38b0b9dc779ff6ec6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97e09415caf1c7f3f5cf31f6383d8344 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_460e4a17a7c8656870bdc1d6ee72d596 = $(`<div id="html_460e4a17a7c8656870bdc1d6ee72d596" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28677<br>     County: Iredell<br>     Area: Statesville North<br>     <b>Land PSIT Score</b>: 1 / 3     </div>`)[0];
+                popup_97e09415caf1c7f3f5cf31f6383d8344.setContent(html_460e4a17a7c8656870bdc1d6ee72d596);
+            
+        
+
+        marker_da56cc04676259b25f5b20f69eb1d9ba.bindPopup(popup_97e09415caf1c7f3f5cf31f6383d8344)
+        ;
+
+        
+    
+    
+                marker_da56cc04676259b25f5b20f69eb1d9ba.setIcon(icon_942a73da75ed40d38b0b9dc779ff6ec6);
+            
+    
+            var marker_eaf7c36f0bba31a37b8f8c28798c8649 = L.marker(
+                [35.485, -81.2753],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_e5976289bc269d3ecfa64630d7e0a4b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10ae1c71f8a3e0dcd83474579f403657 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_62b27388d4c140e604d74bee7e82a6ee = $(`<div id="html_62b27388d4c140e604d74bee7e82a6ee" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28033<br>     County: Lincoln<br>     Area: Lincolnton Area<br>     <b>Land PSIT Score</b>: 1 / 3     </div>`)[0];
+                popup_10ae1c71f8a3e0dcd83474579f403657.setContent(html_62b27388d4c140e604d74bee7e82a6ee);
+            
+        
+
+        marker_eaf7c36f0bba31a37b8f8c28798c8649.bindPopup(popup_10ae1c71f8a3e0dcd83474579f403657)
+        ;
+
+        
+    
+    
+                marker_eaf7c36f0bba31a37b8f8c28798c8649.setIcon(icon_e5976289bc269d3ecfa64630d7e0a4b8);
+            
+    
+            var marker_eac85f2bdaab18510d291144b116dad9 = L.marker(
+                [35.472, -81.2545],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_95adba50632ef4ca911d6bafa3838911 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c5f500a2212c15f1195a27a53a1f6a3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08df7f11830edc9f42c7310b7cbc3788 = $(`<div id="html_08df7f11830edc9f42c7310b7cbc3788" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28092<br>     County: Lincoln<br>     Area: Lincolnton Central<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_1c5f500a2212c15f1195a27a53a1f6a3.setContent(html_08df7f11830edc9f42c7310b7cbc3788);
+            
+        
+
+        marker_eac85f2bdaab18510d291144b116dad9.bindPopup(popup_1c5f500a2212c15f1195a27a53a1f6a3)
+        ;
+
+        
+    
+    
+                marker_eac85f2bdaab18510d291144b116dad9.setIcon(icon_95adba50632ef4ca911d6bafa3838911);
+            
+    
+            var marker_de54ef0a14972a1829bd5cf5fb85b556 = L.marker(
+                [35.4732, -81.4344],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_93635a2637096a9e0f9f0afb573b0cd5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2af2fed6ef62ea065fef23d6afc24f96 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_826d5a46ee60614eab44e2ca86a93198 = $(`<div id="html_826d5a46ee60614eab44e2ca86a93198" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28168<br>     County: Lincoln<br>     Area: Lincolnton North<br>     <b>Land PSIT Score</b>: 1 / 3     </div>`)[0];
+                popup_2af2fed6ef62ea065fef23d6afc24f96.setContent(html_826d5a46ee60614eab44e2ca86a93198);
+            
+        
+
+        marker_de54ef0a14972a1829bd5cf5fb85b556.bindPopup(popup_2af2fed6ef62ea065fef23d6afc24f96)
+        ;
+
+        
+    
+    
+                marker_de54ef0a14972a1829bd5cf5fb85b556.setIcon(icon_93635a2637096a9e0f9f0afb573b0cd5);
+            
+    
+            var marker_7502f3fa2d38309ce0e336bd71a6d60d = L.marker(
+                [35.4712, -81.2544],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_8b3879b76a3f38ece02f84cd0eddc7ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db54f6130a4a6294e2d6ba82c229582c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_104690d2b95676e5a84c16489e3b8928 = $(`<div id="html_104690d2b95676e5a84c16489e3b8928" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28123<br>     County: Lincoln<br>     Area: Lincolnton South<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_db54f6130a4a6294e2d6ba82c229582c.setContent(html_104690d2b95676e5a84c16489e3b8928);
+            
+        
+
+        marker_7502f3fa2d38309ce0e336bd71a6d60d.bindPopup(popup_db54f6130a4a6294e2d6ba82c229582c)
+        ;
+
+        
+    
+    
+                marker_7502f3fa2d38309ce0e336bd71a6d60d.setIcon(icon_8b3879b76a3f38ece02f84cd0eddc7ca);
+            
+    
+            var marker_8bc25e97e038d31fed79b9083012c969 = L.marker(
+                [35.3712, -81.0389],
+                {
+}
+            ).addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+            var icon_24f4a3f3725cd4cbd0c03e198638c3f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24218d08bb5417e6133286f8d789cae1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4287f0b9eccf737929aa3f61b5fecc7 = $(`<div id="html_e4287f0b9eccf737929aa3f61b5fecc7" style="width: 100.0%; height: 100.0%;">     <b>Land Trust Presence</b><br>     ZIP Code: 28164<br>     County: Lincoln<br>     Area: Lincolnton West<br>     <b>Land PSIT Score</b>: 3 / 3     </div>`)[0];
+                popup_24218d08bb5417e6133286f8d789cae1.setContent(html_e4287f0b9eccf737929aa3f61b5fecc7);
+            
+        
+
+        marker_8bc25e97e038d31fed79b9083012c969.bindPopup(popup_24218d08bb5417e6133286f8d789cae1)
+        ;
+
+        
+    
+    
+                marker_8bc25e97e038d31fed79b9083012c969.setIcon(icon_24f4a3f3725cd4cbd0c03e198638c3f4);
+            
+    
+            tile_layer_31537e83dbd46b64cacc7b5fcd60203f.addTo(map_8029b3cb26561e65bbbcdb79e961903b);
+        
+    
+                marker_0d6d84e0997fda745b61850d6c9f0f59.setIcon(icon_f453b135a8bda3d49454ae8199da5ced);
+            
+    
+                marker_e9cf70433f3371a77bb7f795d8220778.setIcon(icon_163446151bbe111dd0b1269abb5c6467);
+            
+    
+                marker_9759b82cff9e0064df743a294529eb88.setIcon(icon_7bd464ae68fac5eb7f5439327cf41dc8);
+            
+    
+                marker_941dc74f3a444747842b8bff932609bc.setIcon(icon_d25d1bad159400ac0afb378676d2d76f);
+            
+    
+                marker_f08d2e3644df75bc7000cf86aa9be47c.setIcon(icon_74b07282c1509e331598bd07d6c1ce50);
+            
+    
+                marker_dae3d81cb36226168c31d94e95ef845f.setIcon(icon_0bebe8278eb3948628c2973ef41c7f3b);
+            
+    
+                marker_5cab10ae500c46b214b70b79cd252972.setIcon(icon_5148f54c570a4095253036e6c2bf02cb);
+            
+    
+                marker_d35d875e2840d786b6ca9462783f8da4.setIcon(icon_856f825e0531fca5f0d98e9bd47920fd);
+            
+    
+                marker_51f7cd7f58002fab45e35852032f1dc8.setIcon(icon_b491e868af8ecbc1e5b4170544ab62f9);
+            
+    
+                marker_21fac0bf81e5e89da1ce51ad79522cf1.setIcon(icon_b95f218a17320567e0a6775bc629056a);
+            
+    
+                marker_57075f7bf12ce26325be4b0f2a37d9ab.setIcon(icon_e9fc23f6672e37b3fb4f4e4dd72fee96);
+            
+    
+                marker_0e80ca52f9f07aefa7c0035995d7b8e6.setIcon(icon_8a325e4ae799f29632ffa8179ea00277);
+            
+    
+                marker_55fef0a0062edc33148b83318f57572a.setIcon(icon_4d71ba822524b8cd7c312278912784e9);
+            
+    
+                marker_2bd5b2cd823a8255e5ef28a26739f09c.setIcon(icon_32fc8ab5f05405ae8018efa203d1fb47);
+            
+    
+                marker_da56cc04676259b25f5b20f69eb1d9ba.setIcon(icon_942a73da75ed40d38b0b9dc779ff6ec6);
+            
+    
+                marker_eaf7c36f0bba31a37b8f8c28798c8649.setIcon(icon_e5976289bc269d3ecfa64630d7e0a4b8);
+            
+    
+                marker_eac85f2bdaab18510d291144b116dad9.setIcon(icon_95adba50632ef4ca911d6bafa3838911);
+            
+    
+                marker_de54ef0a14972a1829bd5cf5fb85b556.setIcon(icon_93635a2637096a9e0f9f0afb573b0cd5);
+            
+    
+                marker_7502f3fa2d38309ce0e336bd71a6d60d.setIcon(icon_8b3879b76a3f38ece02f84cd0eddc7ca);
+            
+    
+                marker_8bc25e97e038d31fed79b9083012c969.setIcon(icon_24f4a3f3725cd4cbd0c03e198638c3f4);
+            
+</script>
+</html>
