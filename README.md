@@ -1,6 +1,16 @@
 # Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis
 This project aims to map, measure, and visualize the Positive Social Impact Tool (PSIT) indicators across different ZIP codes in Charlotte. By integrating demographic, environmental, land use, and accessibility data, we highlight areas of need and opportunity.
 
+## Live Maps (Quick Links)
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/parks_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/recreation_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/transportation_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/education_libraries_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/wellness_safety_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/healthcare_psit_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/finance_map.html
+- https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/land_map.html
+
 ## Figures and Live Maps
 
 ### Charts (PNG)
