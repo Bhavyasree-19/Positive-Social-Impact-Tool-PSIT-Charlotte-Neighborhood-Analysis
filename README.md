@@ -32,7 +32,7 @@ https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neigh
 ![Place Making](figures/place_making.png)
 
 ### Live Maps (GitHub Pages)
-After enabling GitHub Pages for this repo, use these links:
+
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/parks_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/recreation_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/transportation_map.html
@@ -42,12 +42,4 @@ After enabling GitHub Pages for this repo, use these links:
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/finance_map.html
 - https://bhavyasree-19.github.io/Positive-Social-Impact-Tool-PSIT-Charlotte-Neighborhood-Analysis/figures/land_map.html
 
-### How to Enable GitHub Pages
-1. Go to the repo on GitHub.
-2. Open `Settings` → `Pages`.
-3. Set `Source` to `Deploy from a branch`.
-4. Select `main` and `/(root)`, then save.
-5. Wait 1–2 minutes and refresh the live map links above.
 
-### Important
-Make sure the `figures/` folder is committed and pushed to GitHub, or the live links will 404.
